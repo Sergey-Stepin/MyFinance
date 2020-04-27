@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+
+    <body>
+        <div>
+            
+            <a th:href = "@{/home}"> /Номе</a>
+            
+            <h1>Instrument List</h1>
+
+            <p/>
+            <a th:href="@{/instrument/add}">
+                <input type="button" value="Add" />
+            </a>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Instrument name</th>
+                        <th>Currency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="instrument: ${instruments}" >
+                        <td th:text="${instrument.instrumentId}" />
+                        <td th:text="${instrument.type}" />
+                        <td th:text="${instrument.instrumentName}" />
+                        <td th:text="${instrument.currency}" />
+                        
+                        <td>
+                            <a th:href="@{${'/instrument/edit/' + instrument.instrumentId}}">
+                                <input type="button" value="Edit" />
+                            </a>
+                        </td>
+                        <td>
+                            <a th:href="@{${'/instrument/delete/' + instrument.instrumentId}}">
+                                <input type="button" value="Delete" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </body>
+</html>

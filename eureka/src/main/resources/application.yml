@@ -1,0 +1,14 @@
+spring:  
+  application:
+    name: eureka
+
+server:  
+    port: ${PORT:8761}
+      
+eureka:
+    server:
+        enableSelfPreservation: false
+        evictionIntervalTimerInMs: 30000
+    client:
+        registerWithEureka: false
+        fetchRegistry: false

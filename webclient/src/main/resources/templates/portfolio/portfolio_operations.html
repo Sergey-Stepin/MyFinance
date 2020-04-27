@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+    <body>
+
+        <a th:href = "@{/home}"> /Номе</a>
+
+        <h1>Portfolio:</h1>
+
+        <div>
+            <form 
+                th:method="POST"
+                th:action="@{/portfolio}"
+                th:object="${portfolio}">
+
+                <a th:href = "@{${'/portfolio/edit/' + portfolio.portfolioId}}" th:text="' Portfolio info |'"> |</a>
+                <span> Operations | </span>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="portfolio.portfolioId">ID:</label></td>
+                            <td><input type="text" th:field="*{portfolioId}" readonly="readonly"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="portfolio.portfolioName">Portfolio name:</label></td>
+                            <td><input type="text" th:field="*{portfolioName}" readonly="readonly"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p/>
+                <a th:href="@{/operation/choose_type/}">
+                    <input type="button" value="Add operation" />
+                </a>
+
+
+            </form>
+        </div>        
+    </body>
+</html>

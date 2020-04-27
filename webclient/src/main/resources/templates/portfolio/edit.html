@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+    <body>
+
+        <a th:href = "@{/home}"> /Номе</a>
+
+        <h1>Portfolio:</h1>
+
+        <div>
+            <form 
+                th:method="POST"
+                th:action="@{/portfolio}"
+                th:object="${portfolio}">
+
+                <span>Portfolio info | </span>
+                <a th:href = "@{${'/operation/portfolio/' + portfolio.portfolioId}}" th:text="' Operations'"> |</a>
+
+                <input type="submit" value="Cancel" name="_cancel"/>
+                <input type="submit" value="Save" name="_save" />
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="portfolio.portfolioId">ID:</label></td>
+                            <td><input type="text" th:field="*{portfolioId}" readonly="readonly"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="portfolio.portfolioName">Portfolio name:</label></td>
+                            <td><input type="text" th:field="*{portfolioName}"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--
+                <p/>
+                <h2>Instruments:</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID:</th>
+                            <th>Instrument Type:</th>
+                            <th>Name:</th>
+                            <th>Price:</th>
+                            <th>Currency:</th>                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="portfolioInstrument: *{portfolioInstruments}" >
+                            <td th:text="${portfolioInstrument.instrumentId}" />
+                            <td th:text="${portfolioInstrument.instrumentType.name()}" />                        
+                            <td th:text="${portfolioInstrument.instrumentName}" />
+                            <td th:text="${portfolioInstrument.currency}" />
+                        </tr>
+                    </tbody>
+                </table>
+                
+                -->
+
+            </form>
+        </div>        
+    </body>
+</html>
