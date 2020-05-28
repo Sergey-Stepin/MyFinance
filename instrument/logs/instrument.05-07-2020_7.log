@@ -1,0 +1,218 @@
+2020-05-07 11:49:38,888 INFO s.d.m.i.InstrumentApplication [main] No active profile set, falling back to default profiles: default
+2020-05-07 11:49:39,835 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-07 11:49:40,079 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 234ms. Found 1 JPA repository interfaces.
+2020-05-07 11:49:40,243 WARN o.s.b.a.e.EndpointId [main] Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-07 11:49:40,503 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=e5bd0177-22c3-315f-9018-bb8ce3bee94a
+2020-05-07 11:49:40,770 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-07 11:49:41,135 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9002 (http)
+2020-05-07 11:49:41,149 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-9002"]
+2020-05-07 11:49:41,150 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2020-05-07 11:49:41,150 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-07 11:49:41,333 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-07 11:49:41,333 DEBUG o.s.w.c.ContextLoader [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-05-07 11:49:41,334 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 2419 ms
+2020-05-07 11:49:41,452 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 11:49:41,452 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 11:49:41,475 INFO c.n.c.DynamicPropertyFactory [main] DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@fb49fdf
+2020-05-07 11:49:41,937 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-07 11:49:42,088 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-07 11:49:42,316 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-07 11:49:42,499 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-07 11:49:42,694 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-07 11:49:42,725 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-05-07 11:49:44,131 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-07 11:49:44,140 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-07 11:49:44,334 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,337 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,419 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,482 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,516 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,520 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,601 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,734 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:49:44,761 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 11:49:44,762 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 11:49:44,828 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-07 11:49:44,990 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-07 11:49:45,006 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-05-07 11:49:45,133 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [main] 11 mappings in 'requestMappingHandlerMapping'
+2020-05-07 11:49:45,181 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-05-07 11:49:45,194 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-05-07 11:49:46,910 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:49:48,453 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:49:49,930 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:49:50,001 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-07 11:49:50,073 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2020-05-07 11:49:50,117 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2020-05-07 11:49:50,187 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2020-05-07 11:49:50,823 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2020-05-07 11:49:50,824 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2020-05-07 11:49:51,054 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2020-05-07 11:49:51,054 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2020-05-07 11:49:51,332 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2020-05-07 11:49:51,704 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
+2020-05-07 11:49:51,705 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
+2020-05-07 11:49:51,705 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
+2020-05-07 11:49:51,705 INFO c.n.d.DiscoveryClient [main] Application is null : false
+2020-05-07 11:49:51,705 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
+2020-05-07 11:49:51,706 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
+2020-05-07 11:49:51,706 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2020-05-07 11:49:51,955 INFO c.n.d.DiscoveryClient [main] The response status is 200
+2020-05-07 11:49:51,959 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2020-05-07 11:49:51,963 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-07 11:49:51,970 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1588841391969 with initial instances count: 2
+2020-05-07 11:49:51,973 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application INSTRUMENT with eureka with status UP
+2020-05-07 11:49:51,974 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1588841391974, current=UP, previous=STARTING]
+2020-05-07 11:49:51,979 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_INSTRUMENT/localhost:instrument:9002: registering service...
+2020-05-07 11:49:51,999 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-9002"]
+2020-05-07 11:49:52,031 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_INSTRUMENT/localhost:instrument:9002 - registration status: 204
+2020-05-07 11:49:52,062 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9002 (http) with context path ''
+2020-05-07 11:49:52,063 INFO o.s.c.n.e.s.EurekaAutoServiceRegistration [main] Updating port to 9002
+2020-05-07 11:49:53,551 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:49:53,555 INFO s.d.m.i.InstrumentApplication [main] Started InstrumentApplication in 18.499 seconds (JVM running for 20.283)
+2020-05-07 11:50:12,503 INFO o.a.c.c.C.[.[.[/] [http-nio-9002-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-07 11:50:12,504 INFO o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-07 11:50:12,504 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] Detected StandardServletMultipartResolver
+2020-05-07 11:50:12,521 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-05-07 11:50:12,522 INFO o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] Completed initialization in 17 ms
+2020-05-07 11:50:12,536 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-07 11:50:12,550 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-07 11:50:12,828 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-1] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-07 11:50:12,836 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-1] Writing [[AFKS, SBER]]
+2020-05-07 11:50:12,869 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-1] Session Metrics {
+    1289400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    5539100 nanoseconds spent preparing 1 JDBC statements;
+    2099200 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:50:12,875 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] Completed 200 OK
+2020-05-07 11:50:13,037 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-2] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-07 11:50:13,037 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-07 11:50:13,060 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-2] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.486, datetime=2020-05-07T11:50:12+03:00[Europe/Moscow]), Securi (truncated)...]
+2020-05-07 11:50:13,105 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-2] Session Metrics {
+    779200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    118100 nanoseconds spent preparing 2 JDBC statements;
+    7587300 nanoseconds spent executing 2 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    41400 nanoseconds spent executing 2 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:50:13,105 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-2] Completed 200 OK
+2020-05-07 11:50:13,112 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS", parameters={}
+2020-05-07 11:50:13,114 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-07 11:50:13,119 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-07 11:50:13,120 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-3] Writing [[MOEX]]
+2020-05-07 11:50:13,123 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-3] Session Metrics {
+    77900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    106200 nanoseconds spent preparing 1 JDBC statements;
+    616600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-07 11:50:13,124 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-3] Completed 200 OK
+2020-05-07 11:54:51,712 INFO c.n.d.s.r.a.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-05-07 11:59:51,714 INFO c.n.d.s.r.a.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-05-07 12:04:51,716 INFO c.n.d.s.r.a.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration

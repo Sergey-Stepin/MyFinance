@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+    <body>
+
+        <a th:href = "@{/home}"> /Номе</a>
+
+        <h1>Instrument</h1>
+
+        <div>
+            <form 
+                th:method="POST"
+                th:action="@{/operation/edit}"
+                th:object="${operation}">
+
+                <input type="submit" value="Cancel" name="_cancel"/>
+                <input type="submit" value="Save" name="_save" />
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="operationId">ID:</label></td>
+                            <td><input type="text" th:field="*{operationId}" readonly="readonly"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </form>
+        </div>        
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+    <body>
+        <div>
+            
+            <a th:href = "@{/home}"> /Номе</a>
+            
+            <h1>Portfolio Intruments Report</h1>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Portfolio name</th>
+                        <th>Instrument name</th>
+                        
+                        <th>Long Amount</th>
+                        <th>Long Currency Amount</th>
+                        
+                        <th>ShortAmount</th>
+                        <th>Short Currency Amount</th>
+                        
+                        <th>Currency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="reportItem: ${report}" >
+                        <td th:text="${reportItem.getPortfolioName()}" />
+                        <td th:text="${reportItem.getInstrumentName()}" />
+                        
+                        <td th:text="${reportItem.getLongAmount()}" />
+                        <td th:text="${reportItem.getLongCurrencyAmount()}" />
+                        
+                        <td th:text="${reportItem.getShortAmount()}" />
+                        <td th:text="${reportItem.getShortCurrencyAmount()}" />
+                        
+                        <td th:text="${reportItem.getCurrency()}" />
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </body>
+</html>

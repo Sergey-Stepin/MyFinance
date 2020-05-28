@@ -26,22 +26,26 @@ import steps.dev.myfinance7.common.model.portfolio.Portfolio;
 @Embeddable
 public class OperationPart implements Serializable {
     
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true)
     @JoinColumn(name = "portfolio_id")
-    @NotNull
+    //@NotNull
     private Portfolio portfolio;
     
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = true)
     @JoinColumn(name = "instrument_id")
-    @NotNull
+    //@NotNull
     private Instrument instrument;
     
     private double amount;
     
     @NotNull
-    @Column(nullable = false, length = 3)
+    @Column(nullable = true, length = 3)
+    //@ManyToOne(optional = true)
+    ///@JoinColumn(name = "currency")
     private Currency currency;
     
     private double currencyAmmount;
+    
+    private double currencyRate;    
     
 }

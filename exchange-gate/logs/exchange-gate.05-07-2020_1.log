@@ -1,0 +1,51 @@
+2020-05-07 05:18:14,122 INFO s.d.e.g.ExchangeGateApplication [main] No active profile set, falling back to default profiles: default
+2020-05-07 05:18:15,172 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=665f9f24-71c3-326c-b332-cec2e69a6c9d
+2020-05-07 05:18:15,395 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.InstrumentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-07 05:18:15,881 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 05:18:15,882 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 05:18:15,893 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 05:18:15,893 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 05:18:16,089 INFO o.s.s.c.ThreadPoolTaskScheduler [main] Initializing ExecutorService 'taskScheduler'
+2020-05-07 05:18:17,918 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-07 05:18:18,044 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2020-05-07 05:18:18,169 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2020-05-07 05:18:18,918 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2020-05-07 05:18:18,919 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2020-05-07 05:18:19,184 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2020-05-07 05:18:19,184 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2020-05-07 05:18:19,559 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2020-05-07 05:18:20,003 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
+2020-05-07 05:18:20,003 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
+2020-05-07 05:18:20,003 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
+2020-05-07 05:18:20,004 INFO c.n.d.DiscoveryClient [main] Application is null : false
+2020-05-07 05:18:20,004 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
+2020-05-07 05:18:20,004 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
+2020-05-07 05:18:20,004 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2020-05-07 05:18:20,259 INFO c.n.d.DiscoveryClient [main] The response status is 200
+2020-05-07 05:18:20,262 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2020-05-07 05:18:20,266 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-07 05:18:20,271 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1588817900269 with initial instances count: 1
+2020-05-07 05:18:20,273 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application ECHANGE-GATE with eureka with status UP
+2020-05-07 05:18:20,274 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1588817900274, current=UP, previous=STARTING]
+2020-05-07 05:18:20,277 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011: registering service...
+2020-05-07 05:18:20,303 INFO s.d.e.g.ExchangeGateApplication [main] Started ExchangeGateApplication in 8.384 seconds (JVM running for 10.442)
+2020-05-07 05:18:20,332 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011 - registration status: 204
+2020-05-07 05:18:20,656 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-05-07 05:18:20,739 INFO c.n.u.c.ShutdownEnabledTimer [scheduling-1] Shutdown hook installed for: NFLoadBalancer-PingTimer-instrument
+2020-05-07 05:18:20,744 INFO c.n.l.BaseLoadBalancer [scheduling-1] Client: instrument instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-05-07 05:18:20,751 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] Using serverListUpdater PollingServerListUpdater
+2020-05-07 05:18:20,788 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-05-07 05:18:20,794 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] DynamicServerListLoadBalancer for client instrument initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[Desk:9002],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:Desk:9002;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@1b488d7f
+2020-05-07 05:18:20,934 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-05-07 05:18:20,982 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,SBER&iss.meta=off&iss.only=marketdata&lang=ru
+2020-05-07 05:18:21,001 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-05-07 05:18:21,073 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-05-07 05:18:21,074 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-05-07 05:18:21,122 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-05-07 05:18:21,123 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/securities.json?securities=MOEX&iss.meta=off&iss.only=marketdata&lang=ru
+2020-05-07 05:18:21,123 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-05-07 05:18:21,140 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-05-07 05:18:21,141 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-05-07 05:18:21,755 INFO c.n.c.ChainedDynamicProperty [PollingServerListUpdater-0] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647

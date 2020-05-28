@@ -10,10 +10,10 @@ package steps.dev.myfinance7.common.model.operation;
  * @author stepin
  */
 public enum OperationType {
+    INTEREST_RECEIVING,
     
     BANK_ACCOUNT_OPENNING,
     BANK_ACCOUNT_CLOSING,
-    INTEREST_RECEIVING,
     
     BOND_PURCHASING,
     BOND_SELLING,

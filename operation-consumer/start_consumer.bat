@@ -1,0 +1,1 @@
+start java -jar C:\_project\git\Myfinance-1.7\operation-consumer\target\operation-consumer-0.0.1-SNAPSHOT.jar

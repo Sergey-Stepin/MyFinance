@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+    <body>
+
+        <a th:href = "@{/home}"> /Номе</a>
+
+        <h1>Instrument</h1>
+
+        <div>
+            <form 
+                th:method="POST"
+                th:action="@{/instrument/edit}"
+                th:object="${instrument}">
+
+                <input type="submit" value="Cancel" name="_cancel"/>
+                <input type="submit" value="Save" name="_save" />
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="instrumentId">ID:</label></td>
+                            <td><input type="text" th:field="*{instrumentId}" readonly="readonly"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="instrumentType">Type:</label></td>
+                            <td>
+                                <select th:field ="*{instrumentType}">
+                                    <option th:each = "instrumentType : ${avialableInstrumentTypes}"
+                                            th:value ="${instrumentType}"
+                                            th:text ="${instrumentType}" />
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="instrumentName">Instrument name:</label></td>
+                            <td><input type="text" th:field="*{instrumentName}"/></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><label for="currency">Currency:</label></td>
+                            <td>
+                                <select th:field ="*{currency}">
+                                    <option th:each = "currency : ${availableCurrencies}"
+                                            th:value ="${currency}"
+                                            th:text ="${currency}" />
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="ticket">Ticket:</label></td>
+                            <td><input type="text" th:field="*{ticket}"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="price">Price:</label></td>
+                            <td><input type="text" th:field="*{price}" placeholder="0.00"/></td>
+                        </tr>
+                        <tr>
+                            <td><label for="exchangeReceiverName">Type:</label></td>
+                            <td>
+                                <select th:field ="*{exchangeReceiverName}">
+                                    <option th:each = "exchangeReceiverName : ${avialableExchangeReceiverNames}"
+                                            th:value ="${exchangeReceiverName}"
+                                            th:text ="${exchangeReceiverName}" />
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="maturityDate">Maturity date:</label></td>
+                            <td><input type="date" th:field="*{maturityDate}"/></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+            </form>
+        </div>        
+    </body>
+</html>

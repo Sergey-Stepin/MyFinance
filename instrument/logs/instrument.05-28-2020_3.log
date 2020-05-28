@@ -1,0 +1,140 @@
+2020-05-28 12:21:23,977 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [steps.dev.myfinance7.instrument.InstrumentApplicationTests], using SpringBootContextLoader
+2020-05-28 12:21:23,993 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [steps.dev.myfinance7.instrument.InstrumentApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-05-28 12:21:23,995 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [steps.dev.myfinance7.instrument.InstrumentApplicationTests]: InstrumentApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-05-28 12:21:24,164 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration steps.dev.myfinance7.instrument.InstrumentApplication for test class steps.dev.myfinance7.instrument.InstrumentApplicationTests
+2020-05-28 12:21:24,340 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-05-28 12:21:24,370 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32193bea, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6b8d96d9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@69653e16, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@758705fa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@ebaa6cb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@906d29b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@49d3c823, org.springframework.test.context.event.EventPublishingTestExecutionListener@436bc36, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5fe1ce85, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@604c5de8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37091312, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@66fdec9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@57abad67]
+2020-05-28 12:21:28,347 INFO s.d.m.i.InstrumentApplicationTests [main] No active profile set, falling back to default profiles: default
+2020-05-28 12:21:28,355 DEBUG o.s.w.c.s.GenericWebApplicationContext [main] Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1c65121
+2020-05-28 12:21:29,574 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-28 12:21:29,796 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 215ms. Found 1 JPA repository interfaces.
+2020-05-28 12:21:29,966 WARN o.s.b.a.e.EndpointId [main] Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-28 12:21:30,176 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=df83e686-3dc9-3225-aecf-eacae68fc2d5
+2020-05-28 12:21:30,557 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-28 12:21:31,103 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-28 12:21:31,216 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-28 12:21:31,430 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-28 12:21:31,621 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-28 12:21:31,808 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-28 12:21:31,842 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-05-28 12:21:33,243 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-28 12:21:33,252 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-28 12:21:33,653 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,653 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,723 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,793 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,833 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,833 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:33,913 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:34,033 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-28 12:21:34,354 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-28 12:21:34,355 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-28 12:21:34,368 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-28 12:21:34,369 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-28 12:21:34,527 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-28 12:21:35,049 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-28 12:21:35,089 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-05-28 12:21:35,211 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [main] 11 mappings in 'requestMappingHandlerMapping'
+2020-05-28 12:21:35,330 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-05-28 12:21:35,354 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-05-28 12:21:37,600 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-28 12:21:39,170 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-28 12:21:40,647 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-28 12:21:40,763 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-28 12:21:40,888 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2020-05-28 12:21:40,978 INFO s.d.m.i.InstrumentApplicationTests [main] Started InstrumentApplicationTests in 16.537 seconds (JVM running for 19.172)
+2020-05-28 12:21:41,106 DEBUG o.s.w.c.s.GenericWebApplicationContext [SpringContextShutdownHook] Closing org.springframework.web.context.support.GenericWebApplicationContext@1c65121, started on Thu May 28 12:21:28 MSK 2020, parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@4721d212
+2020-05-28 12:21:41,122 INFO o.s.c.n.e.InstanceInfoFactory [SpringContextShutdownHook] Setting initial instance status as: STARTING
+2020-05-28 12:21:41,125 INFO o.s.c.n.e.s.EurekaServiceRegistry [SpringContextShutdownHook] Unregistering application INSTRUMENT with eureka with status DOWN
+2020-05-28 12:21:41,130 INFO o.s.s.c.ThreadPoolTaskExecutor [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-28 12:21:41,136 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-28 12:21:41,140 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-05-28 12:21:41,150 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

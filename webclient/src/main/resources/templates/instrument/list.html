@@ -23,15 +23,21 @@
                         <th>ID</th>
                         <th>Type</th>
                         <th>Instrument name</th>
+                        <th>Receiver</th>
+                        <th>Ticket</th>
+                        <th>Price</th>
                         <th>Currency</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="instrument: ${instruments}" >
                         <td th:text="${instrument.instrumentId}" />
-                        <td th:text="${instrument.type}" />
+                        <td th:text="${instrument.instrumentType}" />
                         <td th:text="${instrument.instrumentName}" />
-                        <td th:text="${instrument.currency}" />
+                        <td th:text="${instrument.exchangeReceiverName}" />                        
+                        <td th:text="${instrument.ticket}" />
+                        <td th:text="${instrument.price}" />                        
+                        <td th:text="${instrument.currency.getCurrencyCode()}" />
                         
                         <td>
                             <a th:href="@{${'/instrument/edit/' + instrument.instrumentId}}">

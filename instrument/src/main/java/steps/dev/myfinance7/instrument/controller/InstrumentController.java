@@ -5,7 +5,10 @@
  */
 package steps.dev.myfinance7.instrument.controller;
 
+import java.time.ZonedDateTime;
+import static java.time.format.DateTimeFormatter.ISO_ZONED_DATE_TIME;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
@@ -20,23 +23,24 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import steps.dev.myfinance7.common.contract.InstrumentService;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 import steps.dev.myfinance7.common.model.instrument.Instrument;
+import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 import steps.dev.myfinance7.instrument.repository.InstrumentRepository;
 
 /**
  *
  * @author stepin
-  */
-
+ */
 @Controller
-public class InstrumentController implements InstrumentService{
+public class InstrumentController implements InstrumentService {
 
     @Autowired
     private InstrumentRepository repository;
 
     @GetMapping("test")
     @Override
-    public ResponseEntity<String> getTest(){
+    public ResponseEntity<String> getTest() {
         return new ResponseEntity<>(this.getClass().getName(), HttpStatus.OK);
     }
 
@@ -49,8 +53,22 @@ public class InstrumentController implements InstrumentService{
     @Override
     public ResponseEntity<Instrument> getById(@PathVariable("id") long id) {
         return new ResponseEntity<>(
-                repository.findById(id).get(), 
+                repository.findById(id).get(),
                 HttpStatus.OK);
+    }
+
+    @GetMapping("/tickets_by_receiver/{exchangeReceiverName}")
+    @Override
+    public ResponseEntity<List<String>> getTicketsByExchangeReceiverName(@PathVariable("exchangeReceiverName") String exchangeReceiverName) {
+
+        List<String> foundTickets
+                = repository
+                        .findByExchangeReceiverName(ExchangeReceiverName.valueOf(exchangeReceiverName))
+                        .stream()
+                        .map(Instrument::getTicket)
+                        .collect(Collectors.toList());
+
+        return ResponseEntity.ok(foundTickets);
     }
 
     @PostMapping(consumes = "application/json")
@@ -68,7 +86,33 @@ public class InstrumentController implements InstrumentService{
     public void put(@RequestBody Instrument instrument) {
         repository.save(instrument);
         //return repository.save(instrument);
-    }   
+    }
+
+    @Override
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
+    public void updateQuotesByTickets(
+            //@RequestBody String securityQuote){
+            //        System.out.println("$$$$$$ securityQuote=" + securityQuote);
+            @RequestBody List<SecurityQuote> securityQuote) {
+
+        securityQuote.stream()
+                .forEach(this::translateAndUpdate);
+        ;
+    }
+
+    private void translateAndUpdate(SecurityQuote quote) {
+        System.out.println("%%% ticket=" + quote.getTicket());
+        System.out.println("%%% price=" + quote.getPrice());
+        System.out.println("%%% dateTime=" + quote.getDatetime());
+        ZonedDateTime datetime = ZonedDateTime.parse(quote.getDatetime(), ISO_ZONED_DATE_TIME);
+        System.out.println("%%% parsed=" + datetime);
+        
+        repository.updatePricesByTickets(
+                quote.getPrice(), 
+                datetime,
+                quote.getTicket());        
+    }
 
     @PatchMapping(path = "/{id}", consumes = "application/json")
     @Override
@@ -89,10 +133,10 @@ public class InstrumentController implements InstrumentService{
             instrument.setInstrumentName(patch.getInstrumentName());
         }
 
-        if (patch.getCurrency() != null) {
+        if (patch.getCurrency()!= null) {
             instrument.setCurrency(patch.getCurrency());
         }
-        
+
         return new ResponseEntity<>(repository.save(instrument), HttpStatus.OK);
     }
 
@@ -105,5 +149,5 @@ public class InstrumentController implements InstrumentService{
         } catch (EmptyResultDataAccessException e) {
         }
     }
-    
+
 }

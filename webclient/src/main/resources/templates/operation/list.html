@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MyPortfolio</title>
+    </head>
+
+    <body>
+        <div>
+            
+            <a th:href = "@{/home}"> /Номе</a>
+            
+            <h1>Operation List</h1>
+
+            <!--
+            <p/>
+            <a th:href="@{/operation/add/}">
+                <input type="button" value="Add" />
+            </a>
+            -->
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>DateTime</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="operation: ${operations}" >
+                        <td th:text="${operation.operationId}" />
+                        <td th:text="${operation.operationTimestamp}" />
+                        <td>
+                            <a th:href="@{${'/operation/edit/' + operation.operationId}}">
+                                <input type="button" value="Edit" />
+                            </a>
+                        </td>
+                        <td>
+                            <a th:href="@{${'/operation/delete/' + operation.operationId}}">
+                                <input type="button" value="Delete" />
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </body>
+</html>

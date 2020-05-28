@@ -1,0 +1,84 @@
+2020-05-07 11:47:32,164 INFO s.d.e.g.ExchangeGateApplication [main] No active profile set, falling back to default profiles: default
+2020-05-07 11:47:32,881 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=665f9f24-71c3-326c-b332-cec2e69a6c9d
+2020-05-07 11:47:33,119 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.InstrumentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-07 11:47:33,525 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 11:47:33,526 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 11:47:33,534 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-07 11:47:33,534 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-07 11:47:33,704 INFO o.s.s.c.ThreadPoolTaskScheduler [main] Initializing ExecutorService 'taskScheduler'
+2020-05-07 11:47:35,324 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:47:36,882 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:47:38,402 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
+2020-05-07 11:47:38,436 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-07 11:47:38,542 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2020-05-07 11:47:38,597 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2020-05-07 11:47:39,391 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2020-05-07 11:47:39,391 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2020-05-07 11:47:39,576 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2020-05-07 11:47:39,577 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2020-05-07 11:47:39,799 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2020-05-07 11:47:40,162 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
+2020-05-07 11:47:40,163 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
+2020-05-07 11:47:40,163 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
+2020-05-07 11:47:40,163 INFO c.n.d.DiscoveryClient [main] Application is null : false
+2020-05-07 11:47:40,163 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
+2020-05-07 11:47:40,163 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
+2020-05-07 11:47:40,164 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2020-05-07 11:47:40,395 INFO c.n.d.DiscoveryClient [main] The response status is 200
+2020-05-07 11:47:40,398 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2020-05-07 11:47:40,401 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-07 11:47:40,406 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1588841260404 with initial instances count: 2
+2020-05-07 11:47:40,408 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application ECHANGE-GATE with eureka with status UP
+2020-05-07 11:47:40,409 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1588841260408, current=UP, previous=STARTING]
+2020-05-07 11:47:40,414 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/localhost:echange-gate:9011: registering service...
+2020-05-07 11:47:40,432 INFO s.d.e.g.ExchangeGateApplication [main] Started ExchangeGateApplication in 12.325 seconds (JVM running for 14.273)
+2020-05-07 11:47:40,475 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/localhost:echange-gate:9011 - registration status: 204
+2020-05-07 11:47:40,713 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-05-07 11:47:40,767 INFO c.n.u.c.ShutdownEnabledTimer [scheduling-1] Shutdown hook installed for: NFLoadBalancer-PingTimer-instrument
+2020-05-07 11:47:40,773 INFO c.n.l.BaseLoadBalancer [scheduling-1] Client: instrument instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-05-07 11:47:40,778 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] Using serverListUpdater PollingServerListUpdater
+2020-05-07 11:47:40,805 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-05-07 11:47:40,810 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] DynamicServerListLoadBalancer for client instrument initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[Desk:9002, localhost:9002],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:2;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:localhost:9002;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+, [Server:Desk:9002;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@f27cc21
+2020-05-07 11:47:41,422 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-05-07 11:47:41,477 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/securities.json?securities=MOEX&iss.meta=off&iss.only=marketdata&lang=ru
+2020-05-07 11:47:41,493 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-05-07 11:47:41,598 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-05-07 11:47:41,599 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-05-07 11:47:41,641 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-05-07 11:47:41,646 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,SBER&iss.meta=off&iss.only=marketdata&lang=ru
+2020-05-07 11:47:41,646 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-05-07 11:47:41,663 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-05-07 11:47:41,663 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-05-07 11:47:41,774 ERROR o.s.s.s.TaskUtils$LoggingErrorHandler [scheduling-1] Unexpected error occurred in scheduled task
+feign.FeignException$InternalServerError: status 500 reading InstrumentClient#updateQuotesByTickets(List)
+	at feign.FeignException.serverErrorStatus(FeignException.java:195) ~[feign-core-10.4.0.jar:?]
+	at feign.FeignException.errorStatus(FeignException.java:144) ~[feign-core-10.4.0.jar:?]
+	at feign.FeignException.errorStatus(FeignException.java:133) ~[feign-core-10.4.0.jar:?]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-10.4.0.jar:?]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:151) ~[feign-core-10.4.0.jar:?]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:80) ~[feign-core-10.4.0.jar:?]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103) ~[feign-core-10.4.0.jar:?]
+	at com.sun.proxy.$Proxy91.updateQuotesByTickets(Unknown Source) ~[?:?]
+	at steps.dev.exchange.gate.receiver.moex.StocksMoexReceiver.update(StocksMoexReceiver.java:59) ~[classes/:?]
+	at steps.dev.exchange.gate.receiver.moex.AbstractMoexReceiver.updateByTickets(AbstractMoexReceiver.java:75) ~[classes/:?]
+	at steps.dev.exchange.gate.service.ExchangeGateService.receive(ExchangeGateService.java:60) ~[classes/:?]
+	at steps.dev.exchange.gate.service.ExchangeGateService.lambda$shceduledStart$0(ExchangeGateService.java:40) ~[classes/:?]
+	at java.util.HashMap$EntrySet.forEach(HashMap.java:1044) ~[?:1.8.0_201]
+	at steps.dev.exchange.gate.service.ExchangeGateService.shceduledStart(ExchangeGateService.java:40) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_201]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_201]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308) [?:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_201]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_201]
+2020-05-07 11:47:41,786 INFO c.n.c.ChainedDynamicProperty [PollingServerListUpdater-0] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647

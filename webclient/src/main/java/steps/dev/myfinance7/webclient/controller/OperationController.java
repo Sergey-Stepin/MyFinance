@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import steps.dev.myfinance7.common.model.operation.Operation;
+import steps.dev.myfinance7.common.model.operation.Operation;
 import steps.dev.myfinance7.common.model.operation.OperationType;
 import steps.dev.myfinance7.common.model.portfolio.Portfolio;
 import steps.dev.myfinance7.webclient.client.OperationClient;
@@ -29,60 +31,52 @@ import steps.dev.myfinance7.webclient.client.PortfolioClient;
 
 @Controller
 @RequestMapping("/operation")
-@SessionAttributes({"portfolio"})
 public class OperationController {
     
     @Autowired
-    private OperationClient client;
-    
-    @Autowired
-    private PortfolioClient portfolioClient;
+    private OperationClient operationClient;
     
     @ModelAttribute("operationTypes")
     public List<OperationType> populateAvailableOperationTypes(){
         return Arrays.asList(OperationType.values());
     }
     
-    @GetMapping("/portfolio/{portfolioId}")
-    public String getPortfolioOperations(
-            @PathVariable long portfolioId,
-            Model model){
-        
-        model.addAttribute("portfolio",portfolioClient.getById(portfolioId).getBody());
-        return "/portfolio/portfolio_operations";
+    @GetMapping("/list")
+    public String getList(Model model){
+        model.addAttribute("operations", operationClient.getList().getBody());
+        return "operation/list";
     }
     
-    @GetMapping("/choose_type")
-    public String getOperationTypes(@ModelAttribute("portfolio") Portfolio portfolio){
-        return "operation/choose_type";
+    @GetMapping("/add")
+    public String getAdd(Model model) {
+        
+        model.addAttribute("operation", new Operation());
+        return "/operation/edit";
     }
 
-    @PostMapping(path = "/choose_type", params = "_add")
-    public String postOperationTypes(
-            @RequestParam String operationType,
-            @ModelAttribute("portfolio") Portfolio portfolio){
+    @GetMapping("/edit/{operationId}")
+    public String getEdit(
+            @PathVariable("operationId") long operationId,
+            Model model) {
         
-        OperationType type = OperationType.valueOf(operationType);
-        switch (type) {
-            
-            case BANK_ACCOUNT_OPENNING:
-                return "redirect:/operation/bank_account_openning/add/" + portfolio.getPortfolioId();
-
-            case BANK_ACCOUNT_CLOSING:
-                return "redirect:/operation/bank_account_closing/add";
-
-            case INTEREST_RECEIVING:
-                return "redirect:/operation/interest_receiving/add";
-                
-            case BOND_PURCHASING:
-            case BOND_SELLING:
-            case BOND_AMORTIZATION:    
-            default:
-                throw new IllegalArgumentException("Cannot create an operation for OperationType: " + type);
-
-        }
-        
+        Operation operation = operationClient.getById(operationId).getBody();
+        System.out.println("### Operation=" + operation);
+        model.addAttribute("operation", operation);
+        return "/operation/edit";
     }
     
+    @PostMapping("/edit")
+    public String postEdit(Operation operation) {
+        
+        operationClient.post(operation);
+        return "redirect:/operation/list";
+    }
+    
+    @GetMapping("/delete/{id}")
+    public String getDelete(@PathVariable long id) {
+        
+        operationClient.delete(id);
+        return "redirect:/operation/list";
+    }
     
 }

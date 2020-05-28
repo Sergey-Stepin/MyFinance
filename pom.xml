@@ -28,6 +28,12 @@
         <module>operation</module>
         <module>eureka</module>
         <module>webclient</module>
+        <module>operation-consumer</module>
+        <module>operation-generator</module>
+        <module>report</module>
+        <module>exchange-gate</module>
+        <module>currecncyrate-consumer</module>
+        <module>currency</module>
     </modules>
 
 </project>

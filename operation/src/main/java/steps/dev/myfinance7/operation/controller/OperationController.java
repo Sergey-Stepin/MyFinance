@@ -6,9 +6,11 @@
 package steps.dev.myfinance7.operation.controller;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,9 +28,10 @@ import steps.dev.myfinance7.operation.repository.OperationRepository;
  * @param <T>
  */
 
-
-public abstract class OperationController implements OperationService{
+@Controller
+public class OperationController implements OperationService{
     
+    @Autowired
     OperationRepository repository;
     
     @GetMapping("test")
@@ -37,7 +40,7 @@ public abstract class OperationController implements OperationService{
         return new ResponseEntity<>(this.getClass().getName(), HttpStatus.OK);
     }
 
-    @GetMapping()
+    @GetMapping
     @Override
     public ResponseEntity<List<Operation>> getList() {
         return ResponseEntity.ok(repository.findAll());
@@ -64,6 +67,7 @@ public abstract class OperationController implements OperationService{
     @Override
     public void put(@RequestBody Operation operation) {
         repository.save(operation);
+        System.out.println("### PUT:" + operation);
     }   
 
     @DeleteMapping("/{id}")

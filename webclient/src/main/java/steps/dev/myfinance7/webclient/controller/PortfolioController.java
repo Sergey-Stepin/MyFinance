@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 import steps.dev.myfinance7.common.model.portfolio.Portfolio;
+import steps.dev.myfinance7.webclient.client.OperationClient;
 import steps.dev.myfinance7.webclient.client.PortfolioClient;
 
 /**
@@ -22,6 +24,7 @@ import steps.dev.myfinance7.webclient.client.PortfolioClient;
  */
 
 @Controller
+//@SessionAttributes({"portfolio"})
 @RequestMapping("/portfolio")
 public class PortfolioController {
     
@@ -35,28 +38,43 @@ public class PortfolioController {
         return "portfolio/list";
     }
     
-    @GetMapping("delete/{id}")
-    public String delete(@PathVariable("id") long id){
-        portfolioClient.delete(id);
+    @GetMapping("delete/{porrtfolioId}")
+    public String delete(@PathVariable("porrtfolioId") long porrtfolioId){
+        portfolioClient.delete(porrtfolioId);
         return "redirect:/portfolio/list";
     }
 
     @GetMapping("/add")
-    public String add(Model model) {
+    public String add(
+            Model model) {
+        
         System.out.println("ADD");
         model.addAttribute("portfolio", new Portfolio());
         return "portfolio/edit";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("/edit/{porrtfolioId}")
     public String edit(
-            @PathVariable("id") long id,
+            @PathVariable("porrtfolioId") long porrtfolioId,
             Model model) {
         
-        Portfolio portfolio = portfolioClient.getById(id).getBody();
+        Portfolio portfolio = portfolioClient.getById(porrtfolioId).getBody();
         model.addAttribute("portfolio", portfolio);
         
         return "portfolio/edit";
+    }
+    
+    @GetMapping("/operations/{porrtfolioId}")
+    public String getPortfolioOperations(
+            @PathVariable("porrtfolioId") long porrtfolioId,
+            Model model){
+        
+        System.out.println("### PORTFOLIO OPERATION:");
+
+        Portfolio portfolio = portfolioClient.getById(porrtfolioId).getBody();
+        model.addAttribute("portfolio", portfolio);
+        
+        return "/portfolio/portfolio_operations";
     }
     
     @PostMapping(params = "_save")

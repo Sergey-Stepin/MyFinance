@@ -17,8 +17,9 @@
                 th:object="${portfolio}">
 
                 <span>Portfolio info | </span>
-                <a th:href = "@{${'/operation/portfolio/' + portfolio.portfolioId}}" th:text="' Operations'"> |</a>
+                <a th:href = "@{${'/portfolio/operations/' + portfolio.portfolioId}}" th:text="' Operations'"> |</a>
 
+                <p/>
                 <input type="submit" value="Cancel" name="_cancel"/>
                 <input type="submit" value="Save" name="_save" />
                 
@@ -34,32 +35,6 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <!--
-                <p/>
-                <h2>Instruments:</h2>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID:</th>
-                            <th>Instrument Type:</th>
-                            <th>Name:</th>
-                            <th>Price:</th>
-                            <th>Currency:</th>                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr th:each="portfolioInstrument: *{portfolioInstruments}" >
-                            <td th:text="${portfolioInstrument.instrumentId}" />
-                            <td th:text="${portfolioInstrument.instrumentType.name()}" />                        
-                            <td th:text="${portfolioInstrument.instrumentName}" />
-                            <td th:text="${portfolioInstrument.currency}" />
-                        </tr>
-                    </tbody>
-                </table>
-                
-                -->
 
             </form>
         </div>        

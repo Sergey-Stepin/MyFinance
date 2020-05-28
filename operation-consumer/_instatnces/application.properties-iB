@@ -1,0 +1,2 @@
+consumer.kafka.topic=first_topic
+consumer.kafka.group=main_group

@@ -1,0 +1,29 @@
+{
+"securities": {
+	"columns": ["SECID", "BOARDID", "SHORTNAME", "PREVPRICE", "LOTSIZE", "FACEVALUE", "STATUS", "BOARDNAME", "DECIMALS", "SECNAME", "REMARKS", "MARKETCODE", "INSTRID", "SECTORID", "MINSTEP", "PREVWAPRICE", "FACEUNIT", "PREVDATE", "ISSUESIZE", "ISIN", "LATNAME", "REGNUMBER", "PREVLEGALCLOSEPRICE", "PREVADMITTEDQUOTE", "CURRENCYID", "SECTYPE", "LISTLEVEL", "SETTLEDATE"], 
+	"data": [
+		["AFKS", "TQBR", "Система ао", 14.193, 100, 0.09, "A", "Т+: Акции и ДР - безадрес.", 3, "АФК \"Система\" ПАО ао", null, "FNDT", "EQIN", "EQ-N", 0.001, 14.133, "SUR", "2020-04-29", 9650000000, "RU000A0DQZE3", "AFK Sistema", "1-05-01669-A", 14.193, 14.193, "SUR", "1", 1, "2020-05-05"],
+		["MOEX", "TQBR", "МосБиржа", 121.5, 10, 1, "A", "Т+: Акции и ДР - безадрес.", 2, "ПАО Московская Биржа", null, "FNDT", "EQIN", "EQ-N", 0.01, 124.13, "SUR", "2020-04-29", 2276401458, "RU000A0JR4A1", "MoscowExchange", "1-05-08443-H", 121.5, 121.5, "SUR", "1", 1, "2020-05-05"],
+		["SBER", "TQBR", "Сбербанк", 195.8, 10, 3, "A", "Т+: Акции и ДР - безадрес.", 2, "Сбербанк России ПАО ао", null, "FNDT", "EQIN", "EQ-N", 0.01, 194.43, "SUR", "2020-04-29", 21586948000, "RU0009029540", "Sberbank", "10301481B", 195.8, 195.8, "SUR", "1", 1, "2020-05-05"]
+	]
+},
+"marketdata": {
+	"columns": ["SECID", "BOARDID", "BID", "BIDDEPTH", "OFFER", "OFFERDEPTH", "SPREAD", "BIDDEPTHT", "OFFERDEPTHT", "OPEN", "LOW", "HIGH", "LAST", "LASTCHANGE", "LASTCHANGEPRCNT", "QTY", "VALUE", "VALUE_USD", "WAPRICE", "LASTCNGTOLASTWAPRICE", "WAPTOPREVWAPRICEPRCNT", "WAPTOPREVWAPRICE", "CLOSEPRICE", "MARKETPRICETODAY", "MARKETPRICE", "LASTTOPREVPRICE", "NUMTRADES", "VOLTODAY", "VALTODAY", "VALTODAY_USD", "ETFSETTLEPRICE", "TRADINGSTATUS", "UPDATETIME", "ADMITTEDQUOTE", "LASTBID", "LASTOFFER", "LCLOSEPRICE", "LCURRENTPRICE", "MARKETPRICE2", "NUMBIDS", "NUMOFFERS", "CHANGE", "TIME", "HIGHBID", "LOWOFFER", "PRICEMINUSPREVWAPRICE", "OPENPERIODPRICE", "SEQNUM", "SYSTIME", "CLOSINGAUCTIONPRICE", "CLOSINGAUCTIONVOLUME", "ISSUECAPITALIZATION", "ISSUECAPITALIZATION_UPDATETIME", "ETFSETTLECURRENCY", "VALTODAY_RUR"], 
+	"data": [
+		["AFKS", "TQBR", null, null, null, null, 0, 0, 0, 14.277, 14.128, 14.498, 14.45, 0.022, 0.15, 12, 17340.00, 235.31, 14.345, 0.317, 1.5, 0.212, null, 14.345, 14.133, 1.81, 16884, 50263100, 721014742, 9784511, null, "N", "19:17:50", 14.45, null, null, 14.45, 14.445, 14.345, null, null, 0.257, "18:48:57", null, null, 0.317, 14.277, 1334473, "2020-04-30 19:32:50", 14.45, 453200, 139442500000, "18:45:22", null, 721014742],
+		["MOEX", "TQBR", null, null, null, null, 0, 0, 0, 121.7, 116.97, 123.94, 120.23, 0.22, 0.18, 1, 1202.30, 16.32, 119.45, -3.9, -3.77, -4.68, null, 119.5, 124.13, -1.05, 59004, 27861440, 3329381309, 45181279, null, "N", "19:17:50", 120.23, null, null, 120.23, 120.23, 119.5, null, null, -1.27, "18:49:42", null, null, -3.9, 121.7, 1334473, "2020-04-30 19:32:50", 120.23, 560980, 273691747295.34, "18:45:42", null, 3329381309],
+		["SBER", "TQBR", null, null, null, null, 0, 0, 0, 196.51, 195.46, 199.7, 197.25, -0.19, -0.1, 5, 9862.50, 133.84, 197.35, 2.82, 1.5, 2.92, null, 197.35, 194.43, 0.74, 98511, 87198650, 17208241262, 233523970, null, "N", "19:17:50", 197.25, null, null, 197.25, 197.25, 197.35, null, null, 1.45, "18:49:48", null, null, 2.82, 196.51, 1334473, "2020-04-30 19:32:50", 197.25, 2108660, 4258025493000, "18:45:59", null, 17208241262]
+	]
+},
+"dataversion": {
+	"columns": ["data_version", "seqnum"], 
+	"data": [
+		[5814, 1334638]
+	]
+},
+"marketdata_yields": {
+	"columns": ["boardid", "secid"], 
+	"data": [
+
+	]
+}}

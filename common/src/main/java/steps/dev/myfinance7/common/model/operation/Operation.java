@@ -7,6 +7,7 @@ package steps.dev.myfinance7.common.model.operation;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Date;
 import javax.persistence.AssociationOverride;
 import javax.persistence.AssociationOverrides;
@@ -15,6 +16,8 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,6 +27,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import lombok.Data;
 
 /**
@@ -39,9 +43,15 @@ public class Operation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long operationId;
+    
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private OperationType opertaionType;
 
-    @Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
-    private Timestamp operationTimestamp;
+    @NotNull
+    @Column(nullable = false, columnDefinition = "TIMESTAMP WITH TIME ZONE")
+    private Timestamp operationTimestamp = Timestamp.from(Instant.now());
 
     @Temporal(TemporalType.DATE)
     private Date paymentDate;
@@ -56,6 +66,8 @@ public class Operation implements Serializable {
     @AttributeOverrides({
         @AttributeOverride(name = "currency", column = @Column(name = "long_currency"))
         ,
+        @AttributeOverride(name = "currencyRate", column = @Column(name = "long_currency_rate"))
+        ,
         @AttributeOverride(name = "currencyAmmount", column = @Column(name = "long_currency_amount"))
         ,
         @AttributeOverride(name = "amount", column = @Column(name = "long_amount"))})
@@ -68,6 +80,8 @@ public class Operation implements Serializable {
         @AssociationOverride(name = "portfolio", joinColumns = @JoinColumn(name = "short_portfolio_id"))})
     @AttributeOverrides({
         @AttributeOverride(name = "currency", column = @Column(name = "short_currency"))
+        ,
+        @AttributeOverride(name = "currencyRate", column = @Column(name = "short_currency_rate"))
         ,
         @AttributeOverride(name = "currencyAmmount", column = @Column(name = "short_currency_amount"))
         ,

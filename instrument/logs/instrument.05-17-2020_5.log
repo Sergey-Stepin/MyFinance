@@ -1,0 +1,1206 @@
+2020-05-17 19:28:50,143 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-9] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:28:50,144 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:28:50,148 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-9] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:28:50,148 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-9] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:28:50,149 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-9] Session Metrics {
+    705200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    738800 nanoseconds spent preparing 1 JDBC statements;
+    1094800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:50,149 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-9] Completed 200 OK
+2020-05-17 19:28:50,740 INFO s.d.m.i.InstrumentApplication [main] No active profile set, falling back to default profiles: default
+2020-05-17 19:28:51,612 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-10] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:28:51,612 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:28:51,623 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-10] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:28:51,637 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-10] Session Metrics {
+    1494800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    83300 nanoseconds spent preparing 3 JDBC statements;
+    2548100 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14700 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,637 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-10] Completed 200 OK
+2020-05-17 19:28:51,647 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-7] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:28:51,651 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:28:51,657 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-7] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:28:51,657 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-7] Writing [[SU26205RMFS3]]
+2020-05-17 19:28:51,658 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-7] Session Metrics {
+    1278300 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1311500 nanoseconds spent preparing 1 JDBC statements;
+    998300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,659 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-7] Completed 200 OK
+2020-05-17 19:28:51,691 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-5] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:28:51,692 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:28:51,695 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-5] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:28:51,701 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-5] Session Metrics {
+    777900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    29500 nanoseconds spent preparing 1 JDBC statements;
+    1206100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    38900 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,701 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-5] Completed 200 OK
+2020-05-17 19:28:51,709 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-4] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:28:51,710 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:28:51,713 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-4] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:28:51,713 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-4] Writing [[]]
+2020-05-17 19:28:51,714 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-4] Session Metrics {
+    1133500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1159900 nanoseconds spent preparing 1 JDBC statements;
+    1056100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,714 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-4] Completed 200 OK
+2020-05-17 19:28:51,720 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:28:51,721 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:28:51,724 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:28:51,724 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-10] Writing [[XS0559915961]]
+2020-05-17 19:28:51,726 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-10] Session Metrics {
+    781900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    819000 nanoseconds spent preparing 1 JDBC statements;
+    549600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,726 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-10] Completed 200 OK
+2020-05-17 19:28:51,759 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-2] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:28:51,760 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:28:51,762 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-2] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:28:51,768 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-2] Session Metrics {
+    53400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    28900 nanoseconds spent preparing 1 JDBC statements;
+    814700 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5100 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:28:51,769 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-2] Completed 200 OK
+2020-05-17 19:28:52,257 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-17 19:28:52,814 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 545ms. Found 1 JPA repository interfaces.
+2020-05-17 19:28:53,116 WARN o.s.b.a.e.EndpointId [main] Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-17 19:28:53,737 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=e5bd0177-22c3-315f-9018-bb8ce3bee94a
+2020-05-17 19:28:54,203 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-17 19:28:54,953 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 7005 (http)
+2020-05-17 19:28:54,987 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-7005"]
+2020-05-17 19:28:54,990 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2020-05-17 19:28:54,991 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-17 19:28:55,373 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2020-05-17 19:28:55,374 DEBUG o.s.w.c.ContextLoader [main] Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2020-05-17 19:28:55,374 INFO o.s.w.c.ContextLoader [main] Root WebApplicationContext: initialization completed in 4594 ms
+2020-05-17 19:28:55,631 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-17 19:28:55,631 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-17 19:28:55,675 INFO c.n.c.DynamicPropertyFactory [main] DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7c663eaf
+2020-05-17 19:28:56,926 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-17 19:28:57,125 INFO o.h.Version [main] HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-17 19:28:57,510 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-17 19:28:57,905 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-17 19:28:58,191 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-17 19:28:58,235 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2020-05-17 19:29:00,142 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-8] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:00,143 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:00,146 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-8] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:00,146 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-8] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:00,147 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-8] Session Metrics {
+    631700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    660800 nanoseconds spent preparing 1 JDBC statements;
+    419300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,147 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-8] Completed 200 OK
+2020-05-17 19:29:00,184 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-5] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:00,184 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:00,194 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-5] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:00,202 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-5] Session Metrics {
+    533400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    43000 nanoseconds spent preparing 3 JDBC statements;
+    1561200 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    15600 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,202 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-5] Completed 200 OK
+2020-05-17 19:29:00,207 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:00,208 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:00,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:00,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-3] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:00,213 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-3] Session Metrics {
+    858800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    889500 nanoseconds spent preparing 1 JDBC statements;
+    534100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,214 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-3] Completed 200 OK
+2020-05-17 19:29:00,245 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-8] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:00,247 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:00,248 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-8] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:00,252 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-8] Session Metrics {
+    692200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    29000 nanoseconds spent preparing 1 JDBC statements;
+    535800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,253 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-8] Completed 200 OK
+2020-05-17 19:29:00,260 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-1] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:00,260 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:00,263 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-1] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:00,263 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-1] Writing [[]]
+2020-05-17 19:29:00,264 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-1] Session Metrics {
+    553500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    587100 nanoseconds spent preparing 1 JDBC statements;
+    360600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,264 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-1] Completed 200 OK
+2020-05-17 19:29:00,269 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-9] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:00,270 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:00,273 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-9] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:00,273 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-9] Writing [[XS0559915961]]
+2020-05-17 19:29:00,274 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-9] Session Metrics {
+    66800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    99400 nanoseconds spent preparing 1 JDBC statements;
+    1175400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,275 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-9] Completed 200 OK
+2020-05-17 19:29:00,306 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-6] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:00,306 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:00,307 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-17 19:29:00,310 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-6] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:00,312 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-6] Session Metrics {
+    31500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    14100 nanoseconds spent preparing 1 JDBC statements;
+    621100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    4700 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,313 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-6] Completed 200 OK
+2020-05-17 19:29:00,320 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-17 19:29:00,738 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,741 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,855 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,939 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:00,993 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:01,002 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:01,114 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:01,334 INFO o.h.e.i.StatisticalLoggingSessionEventListener [main] Session Metrics {
+    0 nanoseconds spent acquiring 0 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    0 nanoseconds spent preparing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:01,375 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-05-17 19:29:01,375 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-17 19:29:01,552 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-17 19:29:01,831 INFO o.s.s.c.ThreadPoolTaskExecutor [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-17 19:29:01,847 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-05-17 19:29:01,968 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [main] 11 mappings in 'requestMappingHandlerMapping'
+2020-05-17 19:29:02,019 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping [main] Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-05-17 19:29:02,047 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver [main] ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-05-17 19:29:04,196 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-17 19:29:04,268 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2020-05-17 19:29:04,321 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2020-05-17 19:29:04,423 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2020-05-17 19:29:05,771 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2020-05-17 19:29:05,771 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2020-05-17 19:29:06,118 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2020-05-17 19:29:06,118 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2020-05-17 19:29:06,572 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2020-05-17 19:29:07,024 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
+2020-05-17 19:29:07,024 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
+2020-05-17 19:29:07,025 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
+2020-05-17 19:29:07,025 INFO c.n.d.DiscoveryClient [main] Application is null : false
+2020-05-17 19:29:07,025 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
+2020-05-17 19:29:07,025 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
+2020-05-17 19:29:07,025 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2020-05-17 19:29:07,396 INFO c.n.d.DiscoveryClient [main] The response status is 200
+2020-05-17 19:29:07,401 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2020-05-17 19:29:07,405 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-17 19:29:07,415 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1589732947412 with initial instances count: 12
+2020-05-17 19:29:07,426 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application INSTRUMENT with eureka with status UP
+2020-05-17 19:29:07,427 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1589732947427, current=UP, previous=STARTING]
+2020-05-17 19:29:07,458 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-7005"]
+2020-05-17 19:29:07,488 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_INSTRUMENT/Desk:instrument:7005: registering service...
+2020-05-17 19:29:07,662 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 7005 (http) with context path ''
+2020-05-17 19:29:07,663 INFO o.s.c.n.e.s.EurekaAutoServiceRegistration [main] Updating port to 7005
+2020-05-17 19:29:07,748 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_INSTRUMENT/Desk:instrument:7005 - registration status: 204
+2020-05-17 19:29:08,543 INFO s.d.m.i.InstrumentApplication [main] Started InstrumentApplication in 20.319 seconds (JVM running for 22.724)
+2020-05-17 19:29:10,142 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-4] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:10,143 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:10,146 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-4] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:10,147 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-4] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:10,147 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-4] Session Metrics {
+    800800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    830700 nanoseconds spent preparing 1 JDBC statements;
+    368800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,148 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-4] Completed 200 OK
+2020-05-17 19:29:10,185 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-7] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:10,186 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:10,195 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-7] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:10,204 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-7] Session Metrics {
+    569500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    73600 nanoseconds spent preparing 3 JDBC statements;
+    2249100 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14300 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,204 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-7] Completed 200 OK
+2020-05-17 19:29:10,209 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-2] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:10,211 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:10,214 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-2] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:10,214 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-2] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:10,215 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-2] Session Metrics {
+    559900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    603900 nanoseconds spent preparing 1 JDBC statements;
+    355400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,215 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-2] Completed 200 OK
+2020-05-17 19:29:10,255 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-10] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:10,257 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:10,287 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7003-exec-10] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:10,383 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-10] Session Metrics {
+    824200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    28400 nanoseconds spent preparing 1 JDBC statements;
+    4188900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5300 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,384 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-10] Completed 200 OK
+2020-05-17 19:29:10,401 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-7] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:10,412 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:10,419 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-7] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:10,419 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-7] Writing [[]]
+2020-05-17 19:29:10,420 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-7] Session Metrics {
+    1087200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1113600 nanoseconds spent preparing 1 JDBC statements;
+    495800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,420 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-7] Completed 200 OK
+2020-05-17 19:29:10,481 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-5] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:10,483 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:10,489 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-5] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:10,496 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-5] Writing [[XS0559915961]]
+2020-05-17 19:29:10,502 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-5] Session Metrics {
+    75000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    111700 nanoseconds spent preparing 1 JDBC statements;
+    851600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,505 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-5] Completed 200 OK
+2020-05-17 19:29:10,577 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-9] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:10,578 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:10,580 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-9] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:10,587 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-9] Session Metrics {
+    41600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    32800 nanoseconds spent preparing 1 JDBC statements;
+    831600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5500 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:10,587 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-9] Completed 200 OK
+2020-05-17 19:29:20,143 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:20,144 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:20,147 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:20,148 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-3] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:20,148 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-3] Session Metrics {
+    767200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    811400 nanoseconds spent preparing 1 JDBC statements;
+    383400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,149 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-3] Completed 200 OK
+2020-05-17 19:29:20,237 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-1] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:20,237 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:20,246 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7003-exec-1] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:20,256 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-1] Session Metrics {
+    846200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    81700 nanoseconds spent preparing 3 JDBC statements;
+    1796800 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    15300 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,256 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-1] Completed 200 OK
+2020-05-17 19:29:20,263 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-8] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:20,264 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:20,266 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-8] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:20,267 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-8] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:20,267 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-8] Session Metrics {
+    729500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    753100 nanoseconds spent preparing 1 JDBC statements;
+    468600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,268 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-8] Completed 200 OK
+2020-05-17 19:29:20,299 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-6] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:20,301 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:20,303 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-6] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:20,311 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-6] Session Metrics {
+    866800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    31600 nanoseconds spent preparing 1 JDBC statements;
+    769400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    7200 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,314 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-6] Completed 200 OK
+2020-05-17 19:29:20,321 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:20,322 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:20,331 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:20,331 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-10] Writing [[]]
+2020-05-17 19:29:20,332 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-10] Session Metrics {
+    1229600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1275000 nanoseconds spent preparing 1 JDBC statements;
+    1010400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,332 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-10] Completed 200 OK
+2020-05-17 19:29:20,337 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-4] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:20,338 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:20,342 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-4] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:20,343 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-4] Writing [[XS0559915961]]
+2020-05-17 19:29:20,343 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-4] Session Metrics {
+    68800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    150700 nanoseconds spent preparing 1 JDBC statements;
+    1069900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,344 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-4] Completed 200 OK
+2020-05-17 19:29:20,373 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-2] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:20,374 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:20,378 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7003-exec-2] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:20,381 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-2] Session Metrics {
+    57700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    31700 nanoseconds spent preparing 1 JDBC statements;
+    594000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    4400 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:20,381 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-2] Completed 200 OK
+2020-05-17 19:29:30,142 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-9] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:30,142 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:30,145 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-9] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:30,145 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-9] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:30,146 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-9] Session Metrics {
+    648500 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    669800 nanoseconds spent preparing 1 JDBC statements;
+    373900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,146 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-9] Completed 200 OK
+2020-05-17 19:29:30,183 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-7] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:30,184 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:30,194 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-7] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:30,203 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-7] Session Metrics {
+    557200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    78100 nanoseconds spent preparing 3 JDBC statements;
+    1532000 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    14500 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,203 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-7] Completed 200 OK
+2020-05-17 19:29:30,208 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:30,209 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:30,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:30,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-3] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:30,213 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-3] Session Metrics {
+    591700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    621700 nanoseconds spent preparing 1 JDBC statements;
+    360400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,213 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-3] Completed 200 OK
+2020-05-17 19:29:30,242 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-5] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:30,243 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:30,247 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7001-exec-5] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:30,252 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-5] Session Metrics {
+    569200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    28600 nanoseconds spent preparing 1 JDBC statements;
+    664900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    16800 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,252 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-5] Completed 200 OK
+2020-05-17 19:29:30,258 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:30,259 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:30,261 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:30,261 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-3] Writing [[]]
+2020-05-17 19:29:30,262 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-3] Session Metrics {
+    667100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    699400 nanoseconds spent preparing 1 JDBC statements;
+    363800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,263 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-3] Completed 200 OK
+2020-05-17 19:29:30,268 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:30,268 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:30,270 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:30,270 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-10] Writing [[XS0559915961]]
+2020-05-17 19:29:30,270 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-10] Session Metrics {
+    37400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    74700 nanoseconds spent preparing 1 JDBC statements;
+    518300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,270 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-10] Completed 200 OK
+2020-05-17 19:29:30,301 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-8] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:30,302 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:30,305 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-8] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:30,309 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-8] Session Metrics {
+    52900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    25200 nanoseconds spent preparing 1 JDBC statements;
+    672700 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    4700 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:30,309 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-8] Completed 200 OK
+2020-05-17 19:29:40,142 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-2] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:40,143 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:40,146 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-2] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:40,147 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-2] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:40,147 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-2] Session Metrics {
+    731400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    765200 nanoseconds spent preparing 1 JDBC statements;
+    483000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,148 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-2] Completed 200 OK
+2020-05-17 19:29:40,183 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-6] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:40,184 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:40,193 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7001-exec-6] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:40,203 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-6] Session Metrics {
+    667100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    96100 nanoseconds spent preparing 3 JDBC statements;
+    1788400 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    18500 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,203 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-6] Completed 200 OK
+2020-05-17 19:29:40,209 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-4] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:40,210 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:40,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-4] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:40,213 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-4] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:40,213 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-4] Session Metrics {
+    609300 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    642000 nanoseconds spent preparing 1 JDBC statements;
+    330600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,214 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-4] Completed 200 OK
+2020-05-17 19:29:40,245 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:40,245 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:40,249 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-1] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:40,254 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-1] Session Metrics {
+    764100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    34000 nanoseconds spent preparing 1 JDBC statements;
+    1158100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    6700 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,254 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-1] Completed 200 OK
+2020-05-17 19:29:40,263 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-9] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:40,263 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:40,267 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-9] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:40,267 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-9] Writing [[]]
+2020-05-17 19:29:40,268 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-9] Session Metrics {
+    860100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    900000 nanoseconds spent preparing 1 JDBC statements;
+    453600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,268 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-9] Completed 200 OK
+2020-05-17 19:29:40,275 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-1] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:40,276 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:40,279 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-1] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:40,280 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-1] Writing [[XS0559915961]]
+2020-05-17 19:29:40,280 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-1] Session Metrics {
+    66200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    169200 nanoseconds spent preparing 1 JDBC statements;
+    717000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,281 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-1] Completed 200 OK
+2020-05-17 19:29:40,316 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-7] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:40,317 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:40,321 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7001-exec-7] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:40,327 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-7] Session Metrics {
+    1352800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    30600 nanoseconds spent preparing 1 JDBC statements;
+    845000 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    6400 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:40,327 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-7] Completed 200 OK
+2020-05-17 19:29:50,145 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-5] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:29:50,146 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:50,150 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-5] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:50,151 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-5] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:29:50,151 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-5] Session Metrics {
+    969800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1030100 nanoseconds spent preparing 1 JDBC statements;
+    441300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,152 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-5] Completed 200 OK
+2020-05-17 19:29:50,187 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-2] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:50,188 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:50,196 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-2] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:29:50,202 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-2] Session Metrics {
+    543600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    82400 nanoseconds spent preparing 3 JDBC statements;
+    1296700 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11500 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,202 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-2] Completed 200 OK
+2020-05-17 19:29:50,207 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-1] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:29:50,208 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-1] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:50,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-1] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:50,212 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-1] Writing [[SU26205RMFS3]]
+2020-05-17 19:29:50,213 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-1] Session Metrics {
+    714800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    744000 nanoseconds spent preparing 1 JDBC statements;
+    462500 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,213 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-1] Completed 200 OK
+2020-05-17 19:29:50,243 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-4] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:50,243 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:50,247 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-4] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:29:50,251 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-4] Session Metrics {
+    585400 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    33900 nanoseconds spent preparing 1 JDBC statements;
+    1228500 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5500 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,252 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-4] Completed 200 OK
+2020-05-17 19:29:50,258 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-8] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:29:50,259 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:50,262 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-8] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:50,262 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-8] Writing [[]]
+2020-05-17 19:29:50,263 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-8] Session Metrics {
+    690800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    733000 nanoseconds spent preparing 1 JDBC statements;
+    739400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,263 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-8] Completed 200 OK
+2020-05-17 19:29:50,267 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-6] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:29:50,268 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:29:50,271 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-6] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:29:50,271 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-6] Writing [[XS0559915961]]
+2020-05-17 19:29:50,273 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-6] Session Metrics {
+    68600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    101000 nanoseconds spent preparing 1 JDBC statements;
+    597800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,274 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-6] Completed 200 OK
+2020-05-17 19:29:50,304 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-3] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:29:50,304 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:29:50,308 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-3] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:29:50,310 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-3] Session Metrics {
+    25000 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    11900 nanoseconds spent preparing 1 JDBC statements;
+    548200 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5100 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:29:50,311 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-3] Completed 200 OK
+2020-05-17 19:29:52,628 INFO c.n.d.s.r.a.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-05-17 19:30:00,143 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:30:00,144 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:00,147 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:00,147 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-10] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:30:00,148 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-10] Session Metrics {
+    706800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    747000 nanoseconds spent preparing 1 JDBC statements;
+    464500 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,148 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-10] Completed 200 OK
+2020-05-17 19:30:00,205 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-4] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:00,206 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:00,214 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-4] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:30:00,222 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-4] Session Metrics {
+    611700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    40200 nanoseconds spent preparing 3 JDBC statements;
+    1733400 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    11700 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,222 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-4] Completed 200 OK
+2020-05-17 19:30:00,227 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-7] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:30:00,228 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-7] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:00,231 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-7] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:00,231 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7003-exec-7] Writing [[SU26205RMFS3]]
+2020-05-17 19:30:00,232 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-7] Session Metrics {
+    755900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    785600 nanoseconds spent preparing 1 JDBC statements;
+    476200 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,232 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-7] Completed 200 OK
+2020-05-17 19:30:00,267 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-9] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:00,268 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-9] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:00,271 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7001-exec-9] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:30:00,276 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-9] Session Metrics {
+    756200 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    31700 nanoseconds spent preparing 1 JDBC statements;
+    614100 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    5400 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,276 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-9] Completed 200 OK
+2020-05-17 19:30:00,283 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-6] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:30:00,284 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:00,287 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-6] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:00,287 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7002-exec-6] Writing [[]]
+2020-05-17 19:30:00,288 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-6] Session Metrics {
+    771700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    805100 nanoseconds spent preparing 1 JDBC statements;
+    455600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,288 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-6] Completed 200 OK
+2020-05-17 19:30:00,426 INFO o.a.c.c.C.[.[.[/] [http-nio-7005-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-17 19:30:00,427 INFO o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] Initializing Servlet 'dispatcherServlet'
+2020-05-17 19:30:00,427 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] Detected StandardServletMultipartResolver
+2020-05-17 19:30:00,445 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2020-05-17 19:30:00,446 INFO o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] Completed initialization in 19 ms
+2020-05-17 19:30:00,463 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:30:00,479 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7005-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:00,684 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7005-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:00,687 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7005-exec-10] Writing [[XS0559915961]]
+2020-05-17 19:30:00,709 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7005-exec-10] Session Metrics {
+    2121700 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    6042300 nanoseconds spent preparing 1 JDBC statements;
+    1860900 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,715 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-10] Completed 200 OK
+2020-05-17 19:30:00,769 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-2] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:00,769 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-2] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:00,773 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7004-exec-2] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:30:00,777 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-2] Session Metrics {
+    705600 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    29400 nanoseconds spent preparing 1 JDBC statements;
+    538300 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    4600 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:00,777 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-2] Completed 200 OK
+2020-05-17 19:30:10,144 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-5] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_STOCKS", parameters={}
+2020-05-17 19:30:10,145 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:10,149 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-5] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:10,149 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-9002-exec-5] Writing [[AFKS, MOEX, SBER, ]]
+2020-05-17 19:30:10,150 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-5] Session Metrics {
+    841100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    918500 nanoseconds spent preparing 1 JDBC statements;
+    498700 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,150 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-5] Completed 200 OK
+2020-05-17 19:30:10,193 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-8] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:10,195 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7003-exec-8] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:10,203 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7003-exec-8] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=AFKS, price=14.0, datetime=2020-05-15T19:31:05+03:00[Europe/Moscow]), Security (truncated)...]
+2020-05-17 19:30:10,213 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7003-exec-8] Session Metrics {
+    757100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    95600 nanoseconds spent preparing 3 JDBC statements;
+    1922500 nanoseconds spent executing 3 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    55700 nanoseconds spent executing 3 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,214 DEBUG o.s.w.s.DispatcherServlet [http-nio-7003-exec-8] Completed 200 OK
+2020-05-17 19:30:10,220 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-10] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOB", parameters={}
+2020-05-17 19:30:10,221 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7001-exec-10] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:10,225 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-10] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:10,225 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7001-exec-10] Writing [[SU26205RMFS3]]
+2020-05-17 19:30:10,226 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7001-exec-10] Session Metrics {
+    844900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    944200 nanoseconds spent preparing 1 JDBC statements;
+    449600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,227 DEBUG o.s.w.s.DispatcherServlet [http-nio-7001-exec-10] Completed 200 OK
+2020-05-17 19:30:10,263 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-5] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:10,264 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7002-exec-5] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:10,267 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-7002-exec-5] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=SU26205RMFS3, price=102.526, datetime=2020-05-15T19:32:13+03:00[Europe/Moscow] (truncated)...]
+2020-05-17 19:30:10,272 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7002-exec-5] Session Metrics {
+    749100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    37300 nanoseconds spent preparing 1 JDBC statements;
+    846600 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    6500 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,273 DEBUG o.s.w.s.DispatcherServlet [http-nio-7002-exec-5] Completed 200 OK
+2020-05-17 19:30:10,281 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-4] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_CURRENCIES", parameters={}
+2020-05-17 19:30:10,282 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7005-exec-4] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:10,286 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7005-exec-4] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:10,286 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7005-exec-4] Writing [[]]
+2020-05-17 19:30:10,288 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7005-exec-4] Session Metrics {
+    1036800 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    1082400 nanoseconds spent preparing 1 JDBC statements;
+    882800 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,290 DEBUG o.s.w.s.DispatcherServlet [http-nio-7005-exec-4] Completed 200 OK
+2020-05-17 19:30:10,298 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-3] GET "/instrument/tickets_by_receiver/MOSCOW_EXCHENGE_BONDS_TQOD", parameters={}
+2020-05-17 19:30:10,299 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-7004-exec-3] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#getTicketsByExchangeReceiverName(String)
+2020-05-17 19:30:10,304 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-3] Using 'application/json', given [application/json] and supported [application/json]
+2020-05-17 19:30:10,304 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor [http-nio-7004-exec-3] Writing [[XS0559915961]]
+2020-05-17 19:30:10,306 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-7004-exec-3] Session Metrics {
+    796900 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    840800 nanoseconds spent preparing 1 JDBC statements;
+    541200 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,306 DEBUG o.s.w.s.DispatcherServlet [http-nio-7004-exec-3] Completed 200 OK
+2020-05-17 19:30:10,365 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-6] POST "/instrument/update_prices_by_tickets", parameters={}
+2020-05-17 19:30:10,365 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping [http-nio-9002-exec-6] Mapped to steps.dev.myfinance7.instrument.controller.InstrumentController#updateQuotesByTickets(List)
+2020-05-17 19:30:10,370 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor [http-nio-9002-exec-6] Read "application/json;charset=UTF-8" to [[SecurityQuote(ticket=XS0559915961, price=116.9009, datetime=2020-05-15T19:32:24+03:00[Europe/Moscow (truncated)...]
+2020-05-17 19:30:10,375 INFO o.h.e.i.StatisticalLoggingSessionEventListener [http-nio-9002-exec-6] Session Metrics {
+    29100 nanoseconds spent acquiring 1 JDBC connections;
+    0 nanoseconds spent releasing 0 JDBC connections;
+    15400 nanoseconds spent preparing 1 JDBC statements;
+    743400 nanoseconds spent executing 1 JDBC statements;
+    0 nanoseconds spent executing 0 JDBC batches;
+    0 nanoseconds spent performing 0 L2C puts;
+    0 nanoseconds spent performing 0 L2C hits;
+    0 nanoseconds spent performing 0 L2C misses;
+    0 nanoseconds spent executing 0 flushes (flushing a total of 0 entities and 0 collections);
+    8000 nanoseconds spent executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+}
+2020-05-17 19:30:10,375 DEBUG o.s.w.s.DispatcherServlet [http-nio-9002-exec-6] Completed 200 OK

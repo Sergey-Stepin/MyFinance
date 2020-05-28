@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import steps.dev.myfinance7.common.model.instrument.Instrument;
+import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 
 /**
  *
@@ -36,6 +37,9 @@ public interface InstrumentService{
     @GetMapping("/{id}")
     public ResponseEntity<Instrument> getById(@PathVariable("id") long id) ;
 
+    @GetMapping("/tickets_by_receiver/{exchangeReceiverName}")
+    public ResponseEntity<List<String>> getTicketsByExchangeReceiverName(@PathVariable("exchangeReceiverName") String exchangeReceiverName) ;
+    
     @PostMapping(consumes = "application/json")
     public ResponseEntity<Instrument> post(@RequestBody Instrument instrument) ;
 
@@ -48,6 +52,13 @@ public interface InstrumentService{
             @PathVariable("id") long id,
             @RequestBody Instrument patch) ;
 
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
+    public void updateQuotesByTickets(
+            @RequestBody List<SecurityQuote> securityQuote) ;
+                        //@RequestBody String securityQuote);
+            
+    
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") long id) ;
