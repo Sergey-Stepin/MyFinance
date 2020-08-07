@@ -5,7 +5,6 @@
  */
 package steps.dev.myfinance7.common.model.exchange;
 
-import java.util.List;
 
 /**
  *
@@ -14,12 +13,6 @@ import java.util.List;
 
 public interface IExchangeReceiver {
     
-//    private final ExchangeReceiverType exchangeReceiverType;
-//
-//    public AbstractExchangeReceiverService(ExchangeReceiverType exchangeReceiverType) {
-//        this.exchangeReceiverType = exchangeReceiverType;
-//    }
-//    
-    public abstract void updateByTickets(List<String> tickets);
+    public abstract void updateByTickets();
     
 }

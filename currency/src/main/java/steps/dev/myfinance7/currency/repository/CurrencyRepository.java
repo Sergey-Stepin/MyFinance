@@ -5,16 +5,16 @@
  */
 package steps.dev.myfinance7.currency.repository;
 
-import java.time.ZonedDateTime;
 import java.util.Currency;
 import java.util.Date;
+import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import steps.dev.myfinance7.common.model.currency.CurrencyItem;
-import steps.dev.myfinance7.common.model.currency.CurrencyRate;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 
 /**
  *
@@ -31,13 +31,15 @@ public interface CurrencyRepository extends JpaRepository<CurrencyItem, Currency
             + ":rateValue,\n"
             + ":rateDate \n"
             + ") on conflict on constraint unq_currency_pair_date do update set\n"
-            + "currency = :currency, ,\n"
+            + "currency = :currency, \n"
             + "base_currency = :baseCurrency, \n"
             + "value = :rateValue, \n"
             + "rate_date = :rateDate \n"
             ;
 
     public CurrencyItem findByTicket(String ticket);
+
+    public List<CurrencyItem> findByExchangeReceiverName(ExchangeReceiverName exchangeReceiverName);
     
     @Query(value = GET_BASE_CURRENCY, nativeQuery = true)    
     public Currency getBaseCurrency();

@@ -10,9 +10,12 @@ import java.time.ZonedDateTime;
 import java.util.Currency;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import lombok.Data;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 
 /**
  *
@@ -27,5 +30,8 @@ public class CurrencyItem implements Serializable {
     private Currency currency;
     
     private String ticket;
+    
+    @Enumerated(EnumType.STRING)
+    private ExchangeReceiverName exchangeReceiverName;
     
 }

@@ -52,11 +52,11 @@ public interface InstrumentService{
             @PathVariable("id") long id,
             @RequestBody Instrument patch) ;
 
-    @ResponseStatus(HttpStatus.OK)
-    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
-    public void updateQuotesByTickets(
-            @RequestBody List<SecurityQuote> securityQuote) ;
-                        //@RequestBody String securityQuote);
+//    @ResponseStatus(HttpStatus.OK)
+//    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
+//    public void updateQuotesByTickets(
+//            @RequestBody List<SecurityQuote> securityQuote) ;
+//                        //@RequestBody String securityQuote);
             
     
     @DeleteMapping("/{id}")

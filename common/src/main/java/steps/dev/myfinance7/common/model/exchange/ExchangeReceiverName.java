@@ -18,14 +18,4 @@ public enum ExchangeReceiverName {
     NYSY,
     DEUTSCHE_BOERSE;
     
-//    private AbstractExchangeReceiverService receiverService;
-//
-//    public AbstractExchangeReceiverService getReceiverService() {
-//        return receiverService;
-//    }
-//
-//    public void setReceiverService(AbstractExchangeReceiverService receiverService) {
-//        this.receiverService = receiverService;
-//    }
-//    
 }

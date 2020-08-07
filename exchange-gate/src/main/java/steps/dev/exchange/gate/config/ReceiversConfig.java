@@ -7,10 +7,17 @@ package steps.dev.exchange.gate.config;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.core.DefaultKafkaProducerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.core.ProducerFactory;
+import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.springframework.web.client.RestTemplate;
 import steps.dev.exchange.gate.client.CurrencyClient;
 import steps.dev.exchange.gate.client.InstrumentClient;
@@ -24,6 +31,7 @@ import steps.dev.exchange.gate.receiver.moex.StocksMoexReceiver;
 import steps.dev.myfinance7.common.model.currency.CurrencyRate;
 import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 import steps.dev.myfinance7.common.model.exchange.IExchangeReceiver;
+import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 
 /**
  *
@@ -33,9 +41,6 @@ import steps.dev.myfinance7.common.model.exchange.IExchangeReceiver;
 @Configuration
 public class ReceiversConfig {
     
-    @Value("${generator.kafka.topic}")
-    private String kafkaTopic;
-    
     @Autowired
     RestTemplate restTemplate;
     
@@ -44,6 +49,13 @@ public class ReceiversConfig {
     
     @Autowired
     CurrencyClient currencyClient;
+
+    @Value("${kafka.currency-rates.producer.topic}")
+    private String kafkaCurrencyRatesTopic;
+    
+    @Value("${kafka.security-quotes.producer.topic}")
+    private String kafkaSecurityQuotesTopic;
+    
     
 //    @Autowired
 //    KafkaTemplate<String, CurrencyRate> kafkaTemplate;    
@@ -60,7 +72,8 @@ public class ReceiversConfig {
     @Autowired
     private CurrenciesMoexReceiverConfig currenciesMoexReceiverConfig;
 
-    @Bean 
+    @Bean
+    @Qualifier("receivers")
     public Map<ExchangeReceiverName, IExchangeReceiver> receivers(){
         
         Map<ExchangeReceiverName, IExchangeReceiver> receivers = new HashMap<>();
@@ -68,18 +81,59 @@ public class ReceiversConfig {
         receivers.clear();
         
         receivers.put(ExchangeReceiverName.MOSCOW_EXCHENGE_STOCKS,
-                new StocksMoexReceiver(restTemplate, instrumentClient, stocksMoexReceiverConfig));
+                new StocksMoexReceiver(
+                        ExchangeReceiverName.MOSCOW_EXCHENGE_STOCKS, 
+                        restTemplate, 
+                        instrumentClient, 
+                        kafkaTemplate(), 
+                        kafkaSecurityQuotesTopic,
+                        stocksMoexReceiverConfig));
         
-        receivers.put(ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOB,
-                new BondsMoexReceiver(restTemplate, instrumentClient, bondsTqobMoexReceiverConfig));
+        receivers.put(
+                ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOB,
+                new BondsMoexReceiver(
+                        ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOB, 
+                        restTemplate, 
+                        instrumentClient, 
+                        kafkaTemplate(), 
+                        kafkaSecurityQuotesTopic,
+                        bondsTqobMoexReceiverConfig));
 
-        receivers.put(ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOD,
-                new BondsMoexReceiver(restTemplate, instrumentClient, bondsTqodMoexReceiverConfig));
+        receivers.put(
+                ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOD,
+                new BondsMoexReceiver(
+                        ExchangeReceiverName.MOSCOW_EXCHENGE_BONDS_TQOD,
+                        restTemplate, 
+                        instrumentClient, 
+                        kafkaTemplate(), 
+                        kafkaSecurityQuotesTopic,
+                        bondsTqodMoexReceiverConfig));
 
-        receivers.put(ExchangeReceiverName.MOSCOW_EXCHENGE_CURRENCIES,
-                new CurrenciesMoexReceiver(restTemplate, currencyClient, currenciesMoexReceiverConfig));
+        receivers.put(
+                ExchangeReceiverName.MOSCOW_EXCHENGE_CURRENCIES,
+                new CurrenciesMoexReceiver(
+                        ExchangeReceiverName.MOSCOW_EXCHENGE_CURRENCIES,
+                        restTemplate, 
+                        currencyClient,                        
+                        kafkaTemplate(), 
+                        kafkaCurrencyRatesTopic,
+                        currenciesMoexReceiverConfig));
         
         return receivers;
+    }
+    
+    @Bean
+    public ProducerFactory<String, SecurityQuote> producerFactory() {
+        Map<String, Object> configProps = new HashMap<>();
+        configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        return new DefaultKafkaProducerFactory<>(configProps);
+    }
+
+    @Bean
+    public KafkaTemplate<String, SecurityQuote> kafkaTemplate() {
+        return new KafkaTemplate<>(producerFactory());
     }
     
 }

@@ -7,10 +7,9 @@ package steps.dev.myfinance7.common.contract;
 
 import java.util.List;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import steps.dev.myfinance7.common.model.quote.SecurityQuote;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  *
@@ -18,9 +17,8 @@ import steps.dev.myfinance7.common.model.quote.SecurityQuote;
  */
 public interface CurrencyService {
     
-    @ResponseStatus(HttpStatus.OK)
-    @PostMapping(path = "/update_rates_by_tickets", consumes = "application/json")
-    public void updateRatesByTickets(
-            @RequestBody List<SecurityQuote> securityQuote) ;
-                        //@RequestBody String securityQuote);
+    @GetMapping("/tickets_by_receiver/{exchangeReceiverName}")
+    public ResponseEntity<List<String>> getTicketsByExchangeReceiverName(@PathVariable("exchangeReceiverName") String exchangeReceiverName) ;
+    
+    
 }

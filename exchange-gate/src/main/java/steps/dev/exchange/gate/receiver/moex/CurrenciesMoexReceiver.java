@@ -11,19 +11,17 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Locale;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
-import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import steps.dev.exchange.gate.config.moex.AbstractMoexReceiverConfig;
 import org.springframework.web.client.RestTemplate;
 import steps.dev.exchange.gate.client.CurrencyClient;
-import steps.dev.exchange.gate.client.InstrumentClient;
 import static steps.dev.exchange.gate.receiver.moex.AbstractMoexReceiver.MOEX_TIME_FORMATTER;
 import steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse;
 import steps.dev.exchange.gate.receiver.moex.interchange.MarketdataDescription;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 
 /**
@@ -34,8 +32,15 @@ public class CurrenciesMoexReceiver extends AbstractMoexReceiver {
     
     private final CurrencyClient currencyClient;
 
-    public CurrenciesMoexReceiver(RestTemplate restTemplate, CurrencyClient currencyClient, AbstractMoexReceiverConfig parameters) {
-        super(restTemplate, parameters);
+    public CurrenciesMoexReceiver(
+            ExchangeReceiverName receiverName,
+            RestTemplate restTemplate, 
+            CurrencyClient currencyClient,             
+            KafkaTemplate<String, SecurityQuote> kafkaTemplate,
+            String kafkaTopic,
+            AbstractMoexReceiverConfig parameters) {
+        
+        super(receiverName, restTemplate, kafkaTemplate, kafkaTopic, parameters);
         
         this.currencyClient = currencyClient;
     }
@@ -48,10 +53,9 @@ public class CurrenciesMoexReceiver extends AbstractMoexReceiver {
 
         debugPrintData(response);
 
-        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
-                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
-                .collect(Collectors.toList());
-        
+//        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
+//                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+//                .collect(Collectors.toList());
         
 //        ResponseEntity<String> postResponse = this.getRestTemplate()
 //                .postForEntity(
@@ -60,12 +64,15 @@ public class CurrenciesMoexReceiver extends AbstractMoexReceiver {
 //                        String.class);
 //        System.out.println("### " + postResponse);
                 
-        currencyClient
-                .updateRatesByTickets(quotes);
+        //currencyClient
+                //.updateRatesByTickets(quotes);
                 //.updateQuotesByTickets("test");
 
+        Stream.of(response.getMarketdata().getData())
+                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+                .forEach(this::sendSecurityQuote);
     }
-
+    
     private SecurityQuote mapToSecurityQuote(String[] marketdataRow, MarketdataDescription marketdataDescription) {
         
         SecurityQuote quote = new SecurityQuote();
@@ -176,6 +183,13 @@ public class CurrenciesMoexReceiver extends AbstractMoexReceiver {
         }
         System.out.println("*************************************************************************");
 
+    }
+
+    @Override
+    protected List<String> getTickets() {
+        return currencyClient
+                .getTicketsByExchangeReceiverName(getReceiverName().name())
+                .getBody();
     }
 
 }

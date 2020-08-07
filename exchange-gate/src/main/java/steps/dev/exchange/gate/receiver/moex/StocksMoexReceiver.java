@@ -17,12 +17,14 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import steps.dev.exchange.gate.config.moex.AbstractMoexReceiverConfig;
 import org.springframework.web.client.RestTemplate;
 import steps.dev.exchange.gate.client.InstrumentClient;
 import static steps.dev.exchange.gate.receiver.moex.AbstractMoexReceiver.MOEX_TIME_FORMATTER;
 import steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse;
 import steps.dev.exchange.gate.receiver.moex.interchange.MarketdataDescription;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 
 /**
@@ -33,8 +35,15 @@ public class StocksMoexReceiver extends AbstractMoexReceiver {
     
     private final InstrumentClient instrumentClient;
 
-    public StocksMoexReceiver(RestTemplate restTemplate, InstrumentClient instrumentClient, AbstractMoexReceiverConfig parameters) {
-        super(restTemplate, parameters);
+    public StocksMoexReceiver(
+            ExchangeReceiverName receiverName,
+            RestTemplate restTemplate, 
+            InstrumentClient instrumentClient, 
+            KafkaTemplate<String, SecurityQuote> kafkaTemplate,
+            String kafkaTopic,
+            AbstractMoexReceiverConfig parameters) {
+        
+        super(receiverName, restTemplate, kafkaTemplate, kafkaTopic, parameters);
         
         this.instrumentClient = instrumentClient;
     }
@@ -47,9 +56,9 @@ public class StocksMoexReceiver extends AbstractMoexReceiver {
 
         debugPrintData(response);
 
-        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
-                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
-                .collect(Collectors.toList());
+//        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
+//                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+//                .collect(Collectors.toList());
         
         
 //        ResponseEntity<String> postResponse = this.getRestTemplate()
@@ -59,10 +68,13 @@ public class StocksMoexReceiver extends AbstractMoexReceiver {
 //                        String.class);
 //        System.out.println("### " + postResponse);
                 
-        instrumentClient
-                .updateQuotesByTickets(quotes);
-                //.updateQuotesByTickets("test");
-
+        //instrumentClient
+                //.updateQuotesByTickets(quotes);
+                
+        Stream.of(response.getMarketdata().getData())
+                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+                .forEach(this::sendSecurityQuote);
+        
     }
 
     private SecurityQuote mapToSecurityQuote(String[] marketdataRow, MarketdataDescription marketdataDescription) {
@@ -175,6 +187,13 @@ public class StocksMoexReceiver extends AbstractMoexReceiver {
         }
         System.out.println("*************************************************************************");
 
+    }
+    
+    @Override
+    protected List<String> getTickets() {
+        return instrumentClient
+                .getTicketsByExchangeReceiverName(getReceiverName().name())
+                .getBody();
     }
 
 }

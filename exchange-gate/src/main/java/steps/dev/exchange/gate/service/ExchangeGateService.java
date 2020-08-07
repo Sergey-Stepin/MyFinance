@@ -8,6 +8,7 @@ package steps.dev.exchange.gate.service;
 import java.util.List;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import steps.dev.exchange.gate.client.InstrumentClient;
@@ -25,6 +26,7 @@ public class ExchangeGateService {
     InstrumentClient instrumentClient;
 
     @Autowired
+    @Qualifier("receivers")
     Map<ExchangeReceiverName, IExchangeReceiver> receivers;
 
     @Scheduled(fixedRateString = "${gate.shedule-rate:5000}")
@@ -35,7 +37,8 @@ public class ExchangeGateService {
 
         receivers
                 .entrySet()
-                .forEach(entry -> receive(entry.getKey(), entry.getValue()));
+                //.forEach(entry -> receive(entry.getKey(), entry.getValue()));
+                .forEach(entry -> entry.getValue().updateByTickets());
     }
 
     private void debugReceiversPrint() {
@@ -47,17 +50,17 @@ public class ExchangeGateService {
 
     }
 
-    private void receive(ExchangeReceiverName receiverName, IExchangeReceiver receiver) {
-
-        System.out.println("###================================================================");
-        System.out.println("### receiverName=" + receiverName.name() + " ; " + receiver);
-        
-        List<String> tickets = instrumentClient
-                .getTicketsByExchangeReceiverName(receiverName.name())
-                .getBody();
-
-        receiver.updateByTickets(tickets);
-
-    }
+//    private void receive(ExchangeReceiverName receiverName, IExchangeReceiver receiver) {
+//
+//        System.out.println("###================================================================");
+//        System.out.println("### receiverName=" + receiverName.name() + " ; " + receiver);
+//        
+//        List<String> tickets = instrumentClient
+//                .getTicketsByExchangeReceiverName(receiverName.name())
+//                .getBody();
+//
+//        receiver.updateByTickets(tickets);
+//
+//    }
 
 }

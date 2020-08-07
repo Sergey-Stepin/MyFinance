@@ -14,6 +14,8 @@ import java.util.Locale;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.util.StringUtils;
 import steps.dev.exchange.gate.config.moex.AbstractMoexReceiverConfig;
 import org.springframework.web.client.RestTemplate;
 import steps.dev.exchange.gate.client.InstrumentClient;
@@ -21,19 +23,27 @@ import static steps.dev.exchange.gate.receiver.moex.AbstractMoexReceiver.MOEX_TI
 import static steps.dev.exchange.gate.receiver.moex.AbstractMoexReceiver.MOEX_ZONEDDATETIME_FORMATTER;
 import steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse;
 import steps.dev.exchange.gate.receiver.moex.interchange.MarketdataDescription;
+import steps.dev.myfinance7.common.model.exchange.ExchangeReceiverName;
 import steps.dev.myfinance7.common.model.quote.SecurityQuote;
 
 /**
  *
  * @author stepin
  */
-public class BondsMoexReceiver extends AbstractMoexReceiver{
-    
+public class BondsMoexReceiver extends AbstractMoexReceiver {
+
     private final InstrumentClient instrumentClient;
 
-    public BondsMoexReceiver(RestTemplate restTemplate, InstrumentClient instrumentClient, AbstractMoexReceiverConfig parameters) {
-        super(restTemplate, parameters);
-        
+    public BondsMoexReceiver(
+            ExchangeReceiverName receiverName,
+            RestTemplate restTemplate,
+            InstrumentClient instrumentClient,
+            KafkaTemplate<String, SecurityQuote> kafkaTemplate,
+            String kafkaTopic,
+            AbstractMoexReceiverConfig parameters) {
+
+        super(receiverName, restTemplate, kafkaTemplate, kafkaTopic, parameters);
+
         this.instrumentClient = instrumentClient;
     }
 
@@ -45,27 +55,40 @@ public class BondsMoexReceiver extends AbstractMoexReceiver{
 
         debugPrintData(response);
 
-        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
-                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
-                .collect(Collectors.toList());
+//        List<SecurityQuote> quotes = Stream.of(response.getMarketdata().getData())
+//                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+//                .collect(Collectors.toList());
+
+        //instrumentClient
+        //.updateQuotesByTickets(quotes);
         
-        instrumentClient
-                .updateQuotesByTickets(quotes);
+        Stream.of(response.getMarketdata().getData())
+                .map(marketdataRow -> mapToSecurityQuote(marketdataRow, marketdataDescription))
+                .forEach(this::sendSecurityQuote);
+        
     }
 
     private SecurityQuote mapToSecurityQuote(String[] marketdataRow, MarketdataDescription marketdataDescription) {
-        
+
         SecurityQuote quote = new SecurityQuote();
-        
+
         try {
 
             String ticket = marketdataRow[marketdataDescription.getSecidColumnNum()];
 
+            String lastPriceAsString;
+
+            if (!StringUtils.hasText(lastPriceAsString = marketdataRow[marketdataDescription.getLastColumnNum()])) {
+                System.out.println("### last is null. returning ... ");
+                return null;
+
+            }
+
             double lastPrice = NumberFormat
                     .getInstance(Locale.forLanguageTag("ru_RU"))
-                    .parse(marketdataRow[marketdataDescription.getLastColumnNum()])
+                    .parse(lastPriceAsString)
                     .doubleValue();
-            
+
             ZonedDateTime systime = MOEX_ZONEDDATETIME_FORMATTER.parse(
                     marketdataRow[marketdataDescription.getSystimeColumnNum()],
                     Locale.forLanguageTag("ru_RU"));
@@ -73,15 +96,15 @@ public class BondsMoexReceiver extends AbstractMoexReceiver{
 
             String datetime = MOEX_ZONEDDATETIME_FORMATTER.print(systime, Locale.forLanguageTag("ru_RU"));
             System.out.println("### datetime=" + datetime);
-            
-            quote.setTicket(ticket);            
+
+            quote.setTicket(ticket);
             quote.setPrice(lastPrice);
             quote.setDatetime(datetime);
-            
+
         } catch (ParseException ex) {
             ex.printStackTrace();
         }
-        
+
         return quote;
     }
 
@@ -140,6 +163,12 @@ public class BondsMoexReceiver extends AbstractMoexReceiver{
         System.out.println("### updateColNum=" + updateColNum + " : " + response.getMarketdata().getData()[rowNum][updateColNum]);
         System.out.println("### LOCALE:" + Locale.getDefault());
         System.out.println("### LOCALE_ru_RU:" + Locale.forLanguageTag("ru_RU"));
+
+        if (response.getMarketdata().getData()[rowNum][lastColNum] == null) {
+            System.out.println("### last is null. returning ... ");
+            return;
+        }
+
         try {
 
             ZonedDateTime systime = MOEX_ZONEDDATETIME_FORMATTER.parse(
@@ -163,6 +192,13 @@ public class BondsMoexReceiver extends AbstractMoexReceiver{
         }
         System.out.println("*************************************************************************");
 
+    }
+
+    @Override
+    protected List<String> getTickets() {
+        return instrumentClient
+                .getTicketsByExchangeReceiverName(getReceiverName().name())
+                .getBody();
     }
 
 }

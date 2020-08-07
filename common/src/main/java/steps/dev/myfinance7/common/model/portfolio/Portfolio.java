@@ -34,11 +34,4 @@ public class Portfolio implements Serializable {
     @Column(unique = true, nullable = false)
     private String portfolioName;
     
-//    @OneToMany(
-//            mappedBy = "portfolio", 
-//            fetch = FetchType.EAGER, 
-//            cascade = {CascadeType.PERSIST, CascadeType.REMOVE},
-//            orphanRemoval = true) 
-//    private Set<PortfolioInstrument> portfolioInsrtuments = new HashSet<>();
-    
 }

@@ -41,10 +41,6 @@ public class CurrencyRate implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-//    @NotNull
-//    @Column(nullable = false, length = 3)
-//    private Currency currency;
-    
     @NotNull    
     @ManyToOne    
     @JoinColumn(name = "currency")

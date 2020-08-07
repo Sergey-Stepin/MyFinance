@@ -88,31 +88,31 @@ public class InstrumentController implements InstrumentService {
         //return repository.save(instrument);
     }
 
-    @Override
-    @ResponseStatus(HttpStatus.OK)
-    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
-    public void updateQuotesByTickets(
-            //@RequestBody String securityQuote){
-            //        System.out.println("$$$$$$ securityQuote=" + securityQuote);
-            @RequestBody List<SecurityQuote> securityQuote) {
-
-        securityQuote.stream()
-                .forEach(this::translateAndUpdate);
-        ;
-    }
-
-    private void translateAndUpdate(SecurityQuote quote) {
-        System.out.println("%%% ticket=" + quote.getTicket());
-        System.out.println("%%% price=" + quote.getPrice());
-        System.out.println("%%% dateTime=" + quote.getDatetime());
-        ZonedDateTime datetime = ZonedDateTime.parse(quote.getDatetime(), ISO_ZONED_DATE_TIME);
-        System.out.println("%%% parsed=" + datetime);
-        
-        repository.updatePricesByTickets(
-                quote.getPrice(), 
-                datetime,
-                quote.getTicket());        
-    }
+//    @Override
+//    @ResponseStatus(HttpStatus.OK)
+//    @PostMapping(path = "/update_prices_by_tickets", consumes = "application/json")
+//    public void updateQuotesByTickets(
+//            //@RequestBody String securityQuote){
+//            //        System.out.println("$$$$$$ securityQuote=" + securityQuote);
+//            @RequestBody List<SecurityQuote> securityQuote) {
+//
+//        securityQuote.stream()
+//                .forEach(this::translateAndUpdate);
+//        ;
+//    }
+//
+//    private void translateAndUpdate(SecurityQuote quote) {
+//        System.out.println("%%% ticket=" + quote.getTicket());
+//        System.out.println("%%% price=" + quote.getPrice());
+//        System.out.println("%%% dateTime=" + quote.getDatetime());
+//        ZonedDateTime datetime = ZonedDateTime.parse(quote.getDatetime(), ISO_ZONED_DATE_TIME);
+//        System.out.println("%%% parsed=" + datetime);
+//        
+//        repository.updatePricesByTickets(
+//                quote.getPrice(), 
+//                datetime,
+//                quote.getTicket());        
+//    }
 
     @PatchMapping(path = "/{id}", consumes = "application/json")
     @Override

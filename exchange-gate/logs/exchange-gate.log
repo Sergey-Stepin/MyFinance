@@ -1,109 +1,360 @@
-2020-05-28 12:35:10,184 INFO s.d.e.g.ExchangeGateApplication [main] No active profile set, falling back to default profiles: default
-2020-05-28 12:35:12,166 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=12b5610e-a0e0-30e4-8fcf-2eebd8fdfc84
-2020-05-28 12:35:12,367 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.InstrumentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-05-28 12:35:12,387 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.CurrencyClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-05-28 12:35:12,946 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
-2020-05-28 12:35:12,946 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-28 12:35:12,954 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
-2020-05-28 12:35:12,955 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-28 12:35:13,168 INFO o.s.s.c.ThreadPoolTaskScheduler [main] Initializing ExecutorService 'taskScheduler'
-2020-05-28 12:35:15,115 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
-2020-05-28 12:35:17,131 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
-2020-05-28 12:35:18,746 INFO o.s.c.c.u.InetUtils [main] Cannot determine local hostname
-2020-05-28 12:35:18,771 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2020-05-28 12:35:18,952 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
-2020-05-28 12:35:19,058 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
-2020-05-28 12:35:19,912 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
-2020-05-28 12:35:19,912 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
-2020-05-28 12:35:20,097 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
-2020-05-28 12:35:20,097 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
-2020-05-28 12:35:20,368 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Application is null : false
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
-2020-05-28 12:35:20,788 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
-2020-05-28 12:35:20,789 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
-2020-05-28 12:35:21,071 INFO c.n.d.DiscoveryClient [main] The response status is 200
-2020-05-28 12:35:21,075 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
-2020-05-28 12:35:21,081 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-05-28 12:35:21,087 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1590658521085 with initial instances count: 7
-2020-05-28 12:35:21,089 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application ECHANGE-GATE with eureka with status UP
-2020-05-28 12:35:21,091 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1590658521091, current=UP, previous=STARTING]
-2020-05-28 12:35:21,101 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011: registering service...
-2020-05-28 12:35:21,124 INFO s.d.e.g.ExchangeGateApplication [main] Started ExchangeGateApplication in 15.188 seconds (JVM running for 17.938)
-2020-05-28 12:35:21,195 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011 - registration status: 204
-2020-05-28 12:35:21,453 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2020-05-28 12:35:21,515 INFO c.n.u.c.ShutdownEnabledTimer [scheduling-1] Shutdown hook installed for: NFLoadBalancer-PingTimer-instrument
-2020-05-28 12:35:21,519 INFO c.n.l.BaseLoadBalancer [scheduling-1] Client: instrument instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
-2020-05-28 12:35:21,524 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] Using serverListUpdater PollingServerListUpdater
-2020-05-28 12:35:21,560 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2020-05-28 12:35:21,564 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] DynamicServerListLoadBalancer for client instrument initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[localhost:9002],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
-},Server stats: [[Server:localhost:9002;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
-]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@2e032fbe
-2020-05-28 12:35:22,091 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:22,126 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:22,141 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:22,248 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:22,249 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:22,354 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:22,356 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:22,356 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:22,375 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:22,376 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:22,407 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:22,419 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:22,420 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:22,421 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:22,438 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:22,438 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:22,532 INFO c.n.c.ChainedDynamicProperty [PollingServerListUpdater-0] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
-2020-05-28 12:35:31,136 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:31,138 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:31,139 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:31,165 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:31,165 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:31,188 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:31,189 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:31,189 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:31,210 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:31,210 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:31,241 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:31,250 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:31,251 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:31,251 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:31,267 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:31,268 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:41,138 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:41,139 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:41,139 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:41,162 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:41,163 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:41,186 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:41,187 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,,SBER&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:41,187 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:41,206 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:41,206 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:41,233 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:41,245 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:41,666 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:41,666 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:41,684 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:41,684 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:51,128 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:51,130 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:51,130 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:51,156 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:51,156 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:51,180 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:51,182 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=MOEX,SBER,,AFKS&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:51,183 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:51,200 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:51,201 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
-2020-05-28 12:35:51,225 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:51,233 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
-2020-05-28 12:35:51,658 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
-2020-05-28 12:35:51,658 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
-2020-05-28 12:35:51,675 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
-2020-05-28 12:35:51,675 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:43:39,485 INFO s.d.e.g.ExchangeGateApplication [main] No active profile set, falling back to default profiles: default
+2020-06-01 17:43:40,230 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=c741a7a7-0e7c-324e-8441-6b196257efe4
+2020-06-01 17:43:40,409 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.CurrencyClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 17:43:40,412 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'steps.dev.exchange.gate.client.InstrumentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-01 17:43:40,931 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-06-01 17:43:40,931 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-01 17:43:40,938 WARN c.n.c.s.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2020-06-01 17:43:40,938 INFO c.n.c.s.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-06-01 17:43:41,196 INFO o.s.s.c.ThreadPoolTaskScheduler [main] Initializing ExecutorService 'taskScheduler'
+2020-06-01 17:43:42,664 WARN o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-06-01 17:43:42,748 INFO o.s.c.n.e.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2020-06-01 17:43:42,805 INFO c.n.d.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2020-06-01 17:43:43,397 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2020-06-01 17:43:43,397 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2020-06-01 17:43:43,559 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2020-06-01 17:43:43,559 INFO c.n.d.p.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2020-06-01 17:43:43,864 INFO c.n.d.s.r.a.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Disable delta property : false
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Single vip registry refresh property : null
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Force full registry fetch : false
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Application is null : false
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Registered Applications size is zero : true
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Application version is -1: true
+2020-06-01 17:43:44,176 INFO c.n.d.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2020-06-01 17:43:44,393 INFO c.n.d.DiscoveryClient [main] The response status is 200
+2020-06-01 17:43:44,396 INFO c.n.d.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2020-06-01 17:43:44,399 INFO c.n.d.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-06-01 17:43:44,404 INFO c.n.d.DiscoveryClient [main] Discovery Client initialized at timestamp 1591022624402 with initial instances count: 5
+2020-06-01 17:43:44,407 INFO o.s.c.n.e.s.EurekaServiceRegistry [main] Registering application ECHANGE-GATE with eureka with status UP
+2020-06-01 17:43:44,409 INFO c.n.d.DiscoveryClient [main] Saw local status change event StatusChangeEvent [timestamp=1591022624408, current=UP, previous=STARTING]
+2020-06-01 17:43:44,418 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011: registering service...
+2020-06-01 17:43:44,435 INFO s.d.e.g.ExchangeGateApplication [main] Started ExchangeGateApplication in 6.658 seconds (JVM running for 8.346)
+2020-06-01 17:43:44,494 INFO c.n.d.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ECHANGE-GATE/Desk:echange-gate:9011 - registration status: 204
+2020-06-01 17:43:44,681 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:44,737 INFO c.n.u.c.ShutdownEnabledTimer [scheduling-1] Shutdown hook installed for: NFLoadBalancer-PingTimer-instrument
+2020-06-01 17:43:44,741 INFO c.n.l.BaseLoadBalancer [scheduling-1] Client: instrument instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-06-01 17:43:44,745 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] Using serverListUpdater PollingServerListUpdater
+2020-06-01 17:43:44,771 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:44,775 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] DynamicServerListLoadBalancer for client instrument initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=instrument,current list of Servers=[Desk:9002],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:Desk:9002;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@3a06df4c
+2020-06-01 17:43:45,217 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:43:45,264 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:43:45,286 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:43:45,448 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:43:45,449 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:43:45,508 INFO o.a.k.c.p.ProducerConfig [scheduling-1] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = 
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2020-06-01 17:43:45,713 INFO o.a.k.c.u.AppInfoParser [scheduling-1] Kafka version: 2.3.1
+2020-06-01 17:43:45,713 INFO o.a.k.c.u.AppInfoParser [scheduling-1] Kafka commitId: 18a913733fb71c01
+2020-06-01 17:43:45,713 INFO o.a.k.c.u.AppInfoParser [scheduling-1] Kafka startTimeMs: 1591022625710
+2020-06-01 17:43:45,754 INFO c.n.c.ChainedDynamicProperty [PollingServerListUpdater-0] Flipping property: instrument.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:45,974 INFO o.a.k.c.Metadata [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] Cluster ID: Qc1uzew0Se6IhHctxfwVHA
+2020-06-01 17:43:46,149 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:43:46,150 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:43:46,151 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:43:46,220 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:43:46,220 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:43:46,618 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: currency.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:46,624 INFO c.n.u.c.ShutdownEnabledTimer [scheduling-1] Shutdown hook installed for: NFLoadBalancer-PingTimer-currency
+2020-06-01 17:43:46,624 INFO c.n.l.BaseLoadBalancer [scheduling-1] Client: currency instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=currency,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-06-01 17:43:46,629 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] Using serverListUpdater PollingServerListUpdater
+2020-06-01 17:43:46,639 INFO c.n.c.ChainedDynamicProperty [scheduling-1] Flipping property: currency.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:46,641 INFO c.n.l.DynamicServerListLoadBalancer [scheduling-1] DynamicServerListLoadBalancer for client currency initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=currency,current list of Servers=[Desk:9009],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:Desk:9009;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 03:00:00 MSK 1970;	First connection made: Thu Jan 01 03:00:00 MSK 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@26bec531
+2020-06-01 17:43:47,704 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:43:47,705 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:43:47,705 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:43:47,727 INFO c.n.c.ChainedDynamicProperty [PollingServerListUpdater-0] Flipping property: currency.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-06-01 17:43:47,760 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:43:47,761 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:43:47,803 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:43:47,804 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:43:47,805 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:43:47,859 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:43:47,860 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:14,447 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:14,448 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:14,448 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:14,568 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:14,568 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:14,603 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:14,603 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:14,603 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:14,662 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:14,663 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:15,100 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:15,101 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:15,102 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:15,184 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:15,185 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:15,205 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:15,206 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:15,206 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:15,281 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:15,281 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:44,461 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:44,462 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:44,463 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:44,524 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:44,525 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:44,566 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:44,567 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:44,567 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:44,626 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:44,627 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:44,974 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:44,975 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:44,976 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:45,040 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:45,041 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:44:45,067 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:44:45,068 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:44:45,068 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:44:45,115 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:44:45,115 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:14,466 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:14,466 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:14,467 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:14,560 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:14,560 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:14,594 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:14,594 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:14,595 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:14,649 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:14,649 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:14,667 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:14,668 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:14,668 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:14,730 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:14,730 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:14,754 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:14,755 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:14,755 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:14,806 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:14,806 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:44,455 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:44,457 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:44,457 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:44,525 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:44,525 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:44,548 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:44,549 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:44,549 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:44,604 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:44,604 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:44,622 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:44,623 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:44,623 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:44,676 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:44,676 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:45:44,698 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:45:44,699 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:45:44,699 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:45:44,755 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:45:44,755 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:14,456 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:14,457 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:14,458 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:14,550 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:14,550 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:14,582 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:14,583 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:14,583 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:14,657 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:14,657 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:14,681 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:14,682 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:14,682 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:14,750 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:14,750 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:15,194 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:15,195 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:15,195 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:15,273 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:15,274 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:44,446 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:44,446 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,,SBER&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:44,447 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:44,594 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:44,594 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:44,637 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:44,638 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:44,638 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:44,697 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:44,697 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:44,714 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:44,715 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:44,715 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:44,765 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:44,766 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:46:45,133 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:46:45,134 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:46:45,134 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:46:45,184 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:46:45,185 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:14,453 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:14,455 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:14,455 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:14,608 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:14,609 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:14,635 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:14,637 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:14,637 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:14,715 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:14,717 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:15,135 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:15,135 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:15,135 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:15,217 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:15,217 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:15,645 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:15,647 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:15,647 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:15,693 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:15,694 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:44,453 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:44,454 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:44,454 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:44,566 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:44,567 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:44,601 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:44,602 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:44,602 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:44,654 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:44,655 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:44,673 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:44,673 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:44,673 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:44,726 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:44,726 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:47:44,772 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:47:44,773 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:47:44,773 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:47:44,837 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:47:44,837 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:14,444 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:14,444 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:14,444 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:14,532 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:14,532 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:14,571 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:14,572 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:14,572 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:14,624 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:14,624 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:14,641 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:14,642 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:14,642 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:14,695 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:14,695 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:14,713 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:14,714 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:14,714 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:14,750 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:14,751 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:44,180 INFO c.n.d.s.r.a.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-06-01 17:48:44,444 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:44,445 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:44,446 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:44,553 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:44,553 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:44,580 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:44,580 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:44,581 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:44,646 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:44,647 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:45,073 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:45,074 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:45,074 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:45,131 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:45,131 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:48:45,152 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:48:45,153 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:48:45,153 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:48:45,209 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:48:45,209 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:49:14,451 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:49:14,452 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json?securities=AFKS,MOEX,SBER,&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:49:14,452 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:49:14,594 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:49:14,595 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:49:14,618 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:49:14,618 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOD/securities.json?securities=XS0559915961&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:49:14,619 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:49:14,703 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:49:14,703 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:49:14,718 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:49:14,719 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/currency/markets/selt/boards/cets/securities.json?securities=USD000UTSTOM,EUR_RUB__TOM&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:49:14,719 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:49:14,809 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:49:14,809 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
+2020-06-01 17:49:14,842 DEBUG o.s.w.c.HttpMessageConverterExtractor [scheduling-1] Reading to [java.util.List<java.lang.String>]
+2020-06-01 17:49:14,843 DEBUG o.s.w.c.RestTemplate [scheduling-1] HTTP GET http://iss.moex.com/iss/engines/stock/markets/bonds/boards/TQOB/securities.json?securities=SU26205RMFS3&iss.meta=off&iss.only=marketdata&lang=ru
+2020-06-01 17:49:14,843 DEBUG o.s.w.c.RestTemplate [scheduling-1] Accept=[application/json, application/*+json]
+2020-06-01 17:49:14,925 DEBUG o.s.w.c.RestTemplate [scheduling-1] Response 200 OK
+2020-06-01 17:49:14,926 DEBUG o.s.w.c.RestTemplate [scheduling-1] Reading to [steps.dev.exchange.gate.receiver.moex.interchange.ExchangeResponse]
