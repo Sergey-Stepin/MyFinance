@@ -13,38 +13,38 @@ Project for studing and testig purposes.
 
 # Modules:
 
-. Common
+1. Common
 Packages of common classes such as: cmodels, contracts, utils etc.
 
-.Eureca
+2. Eureca
 Service-Discovery
 
-. Instruments
+3. Instruments
 RESTful back-end web-service for financial instruments
 Receives and updates market quotes throw Kafka
 
-. Portfolio
+4. Portfolio
 RESTful back-end web-service for financial portfolios of instruments
 
-. Operations
+5. Operations
 RESTful back-end web-service for financial operations with instruments
 
-. Currency
+6. Currency
 RESTful back-end web-service for currency rates
 Receives and updates market quotes throw Kafka
 
-. WebClient
+7. WebClient
 Web-server (Thymeleaf + Spring)
 Eureca + Feign is used for communication with the backends
 
-.Exchange-gate
+8. Exchange-gate
 Integrates the system with financial-exchanges
 Implemented integration with MOEX (http://moex.ru/): gets stocks- bonds- and currency-rates and updates the rates in the system through Kafka
 
-. Report
+9. Report
 RESTful back-end web-service for financial reports
 
-. Telegram
+10. Telegram
 Telegrambot-integration: sends updated stocks- bonds- and currency-rates to a Telegram-chat
 
 
