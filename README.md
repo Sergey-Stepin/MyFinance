@@ -1,5 +1,5 @@
 # MyFinance
-Project for studing and testig purposes.
+Project for studding and testing purposes.
 
 # Subjects:
 - Srping
@@ -14,7 +14,7 @@ Project for studing and testig purposes.
 # Modules:
 
 1. Common
-Packages of common classes such as: cmodels, contracts, utils etc.
+Packages of common classes such as: models, contracts, utils etc.
 
 2. Eureca
 Service-Discovery
@@ -46,12 +46,3 @@ RESTful back-end web-service for financial reports
 
 10. Telegram
 Telegrambot-integration: sends updated stocks- bonds- and currency-rates to a Telegram-chat
-
-
-
-
-
-
-
-
-
