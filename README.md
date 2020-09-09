@@ -1,17 +1,17 @@
 # MyFinance
 Project for studing and testig purposes.
 
-#Subjects:
-*Srping
-*Microservices, 
-*Service-Discovery,
-*Feign,
-*JPA,
-*Thymeleaf,
-*Kafka,
-*Chatbots
+# Subjects:
+- Srping
+- Microservices, 
+- Service-Discovery,
+- Feign,
+- JPA,
+- Thymeleaf,
+- Kafka,
+- Chatbots
 
-#Modules:
+# Modules:
 
 1. Common
 Packages of common classes such as: cmodels, contracts, utils etc.
