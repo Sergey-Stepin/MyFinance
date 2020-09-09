@@ -16,11 +16,23 @@ Project for studing and testig purposes.
 1. Common
 Packages of common classes such as: cmodels, contracts, utils etc.
 
-2. Instruments
-Back-end for financial instruments
+2.Eureca
+Service-Discovery
 
-3. Portfolio
-Back-end for financial portfolios of instruments
+3. Instruments
+RESTful back-end web-service for financial instruments
 
-4. Operations
-Back-end for financial operations with instruments
+
+4. Portfolio
+RESTful back-end web-service financial portfolios of instruments
+
+5. Operations
+RESTful back-end web-service or financial operations with instruments
+
+6. WebClient
+Web-server (Thymeleaf + Spring)
+Eureca + Feign is used for communication with the backends
+
+
+
+
